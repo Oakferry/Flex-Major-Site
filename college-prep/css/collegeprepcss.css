@@ -218,6 +218,8 @@ main {
     gap: 1rem;
     flex-wrap: wrap;
     margin-bottom: 2rem;
+    display: none;
+    /* Apagar essa linha de código quando lançar o College Prep. 2026 */
 }
 
 .btn-modern {
@@ -230,6 +232,7 @@ main {
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
+    display: none;  /* Apagar essa linha de código quando lançar o College Prep. 2026 */
 }
 
 .btn-modern:hover {
@@ -240,6 +243,7 @@ main {
     background: transparent;
     border: 2px solid white;
     color: white;
+    display: none;  /* Apagar essa linha de código quando lançar o College Prep. 2026 */
 }
 
 .btn-modern.outline:hover {
@@ -255,7 +259,46 @@ main {
     margin: 0 auto;
     text-align: left;
     opacity: 0.95;
+    display: none;
+    /* Apagar essa linha de código quando lançar o College Prep. 2026 */
 }
+
+/* Descrição em breve */
+.descricao-embreve {
+    font-size: 3rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: Center;
+    opacity: 1;
+}
+
+.descricao-embreve>span {
+    font-weight: 700;
+}
+
+.link-embreve {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn-wpp-embreve {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background:#09b317;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-wpp-embreve:hover {
+    background: #0d9900af;
+}
+
 
 
 /* ---------------- */
