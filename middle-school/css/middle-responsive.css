@@ -1,0 +1,150 @@
+/* Ajustes específicos para telas pequenas */
+@media screen and (max-width: 768px) {
+    .banner-middle {
+        background-attachment: local;
+    }
+
+    .content-middle h1 {
+        font-size: 3rem;
+    }
+
+    .container-texto>p {
+        padding: 10px 0px;
+    }
+
+    .banner-imerssion {
+        padding: 1.5rem 1rem;
+        background-attachment: scroll;
+        /* desativa fixed para evitar bugs em iOS */
+    }
+
+    .img-middle {
+        /* flex: 1; */
+        min-height: auto;
+    }
+
+    .img-middle img {
+        width: 100vh;
+        height: 50vh;
+    }
+
+    .container-sobre {
+        gap: 1rem;
+    }
+
+    .benefit {
+        gap: 14px;
+        margin-bottom: 13px;
+        padding: 2px 5px;
+    }
+
+    .container-texto,
+    .img-middle {
+        min-height: 0;
+    }
+
+    .container-topicos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+        /* colunas adaptáveis */
+        gap: 30px;
+        /* espaçamento entre os blocos */
+        max-width: 300px;
+        /* largura máxima */
+        margin: 0 auto;
+        /* centraliza horizontalmente */
+        text-align: left;
+        /* alinha o texto à esquerda */
+    }
+
+    .container-beneficts {
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
+    }
+
+    .img-creditos img {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .container-creditos-modern {
+        gap: 3.5rem;
+    }
+
+
+    .creditos-table-wrapper {
+        flex: 1;
+        max-width: 95vw;
+    }
+
+    .creditos-tabela-modern {
+        width: 100vw;
+    }
+
+
+    .controle {
+        flex-direction: row;
+        gap: 15px;
+        padding-right: 0;
+        margin-bottom: 0px;
+    }
+
+    .linha-1,
+    .linha-2,
+    .linha-3 {
+        height: 8px;
+        width: 100px;
+    }
+
+    .linha-1 {
+        margin-top: 0px;
+    }
+
+    .controle-content>h3 {
+        text-align: center;
+    }
+
+    .parceiros {
+        width: 100%;
+    }
+
+    .carousel-container {
+        width: 100%;
+        flex: 1;
+    }
+
+    .carousel-images {
+        width: 98%;
+        margin: 0;
+    }
+
+    .carousel-videos {
+        justify-content: start;
+    }
+
+    .titulo-secao {
+        text-align: center;
+    }
+
+    .lista-requisitos {
+        /* list-style: disc; */
+        padding-left: 50px;
+        width: 95%;
+        /* font-size: 1rem; */
+        /* color: #444; */
+        /* line-height: 1.6; */
+    }
+
+    .quem-pode-conteudo {
+        padding: 5px 20px;
+
+    }
+
+    .impacto-section {
+        padding: 60px 20px 20px 20px;
+        background: #fff;
+        text-align: center;
+    }
+
+}

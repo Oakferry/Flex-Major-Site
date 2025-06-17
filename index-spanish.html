@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Major</title>
+
+    <link rel="stylesheet" href="/index/css/style.css">
+    <link rel="stylesheet" href="/index/css/style-index-responsive.css">
+    <link rel="stylesheet" href="/footer/css/footer.css">
+    <link rel="shortcut icon" href="/index/img/LOGO.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/navbar/css/navbar.css">
+    <!-- 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     -->
+     <style>
+        .wpp-fixo {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+
+        .wpp-fixo a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .wpp-fixo img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        /* Tooltip acima */
+        .wpp-fixo a::after {
+            content: "Fale conosco";
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 6px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            opacity: 0;
+            white-space: nowrap;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        /* Setinha para baixo (abaixo do balão) */
+        .wpp-fixo a::before {
+            content: "";
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .wpp-fixo a:hover::after,
+        .wpp-fixo a:hover::before {
+            opacity: 1;
+        }
+
+        /* Animação pulsante */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Nav-bar principal -->
+    <section class="barraSuperior">
+
+        <!-- rigth section -->
+        <div class=" rigthSide">
+
+            <!-- Flags -->
+            <div class="bandeiraIdioma me-1">
+                <a href="/index.html" class="brasil">
+                    <img src="index/img/brasil (1).png" alt="br">
+                </a>
+                <a href="/index-english.html" class="eua">
+                    <img src="index/img/estados-unidos24.png" alt="en">
+                </a>
+                <a href="/index-spanish.html" class="espanha">
+                    <img src="index/img/espanha24.png" alt="es">
+                </a>
+            </div>
+
+            <!-- socia midia links -->
+            <div class="redeSociais ms-3">
+                <a target="_blank" href="https://www.instagram.com/flexmajorschool/" class="text-white ">
+                    <img src="/index/img/instagram.svg" alt="instagram">
+                </a>
+                <a target="_blank" href="https://www.facebook.com/Flex-Major-School-102353782292788" class="text-white ms-1">
+                    <img src="/index/img/facebook.svg" alt="facebook">
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/company/flex-major-school/" class="text-white ms-1">
+                    <img src="/index/img/linkedin32.png" alt="linkedin">
+                </a>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <header class="header2" id="header">
+        <a id="logo" href="/index-spanish.html">
+            <img src="/index/img/LOGO.svg" alt="logo">
+        </a>
+        <nav id="nav">
+            <button aria-label="Abrir menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li class="dropdown">
+                    <a class="mexer" href="/">Elige tu programa
+                        <img src="index/img/seta-para-baixo.png" alt="">
+                    </a> 
+                    <ul class="dropdown-menu">
+                        <li><a href="middle-school/middle-esp.html">Middle School</a></li>
+                        <li><a href="high-school/high-esp.html">High School</a></li>
+                        <li><a href="college-prep/college-esp.html">College Prep</a></li>
+                    </ul>
+                </li>
+                <li><a href="/sobre-nos/sobre-esp.html">Sobre nosotros</a></li>
+                <li><a href="/album/album-spanish.html">Álbum</a></li>
+                <li><a href="/partnership/partnership-spanish.html">Sé una escuela asociada</a></li>
+                <li class="link-album-mobile">
+
+                    <!-- Mudar idioma -->
+                    <a href="/index.html" class="text-white me-3"> <img src="/index/img/brasil (1).png" alt="br"></a>
+                    <a href="/index-english.html" class="text-white"> <img src="/index/img/estados-unidos24.png" alt="en"></a>
+                    <a href="/index-spanish.html" class="text-white"> <img src="/index/img/espanha24.png" alt="es"></a>
+                </li>
+                <li class="redeSociais-mobile">
+                    <a target="_blank" href="https://www.instagram.com/flexmajorschool/" class="text-white ">
+                        <img src="index/img/instagram-mobile.png" alt="instagram">
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/Flex-Major-School-102353782292788" class="text-white ms-1">
+                        <img src="index/img/facebook-mobile.png" alt="facebook">
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/company/flex-major-school/" class="text-white ms-1 "
+                        style="object-fit: cover;">
+                        <img src="index/img/linkedin-mobile (1).png " alt="linkedine">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <!-- Banner 1 -->
+    <div class="banner">
+        <div class="div-banner-img">
+            <video class="tamanho" autoplay muted loop>
+                <source class="arruma" src="/index/img/Banner.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="label-banner">
+            <h2>Contáctanos</h2>
+            <form action="#" method="post">
+                <div class="input-group">
+                    <input type="text" name="nome" placeholder="Nombre completo*" required>
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" name="celular" placeholder="Teléfono" required>
+                    <input type="date" name="nascimento" placeholder="dd/mm/aaaa" required>
+                </div>
+                <div class="input-group">
+                    <input id="cidade_estado" type="text" name="cidade_estado" placeholder="Ciudad - Estado" required>
+                    <script>
+                        function initAutocomplete() {
+                            var input = document.getElementById("cidade_estado");
+                            var autocomplete = new google.maps.places.Autocomplete(input, {
+                                types: ["(cities)"],
+                                componentRestrictions: { country: "br" }
+                            });
+                        }
+                    </script>
+
+                    <select name="pais" required>
+                        <option value="" disabled selected>País*</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="EUA">Estados Unidos</option>
+                        <option value="Mexico">México</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Espanha">España</option>
+                        <option value="Franca">Francia</option>
+                        <option value="Alemanha">Alemania</option>
+                        <option value="Italia">Italia</option>
+                        <option value="Reino Unido">Reino Unido</option>
+                        <option value="Japao">Japón</option>
+                        <option value="China">China</option>
+                        <option value="India">India</option>
+                        <option value="Outro">Otro</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-label">Enviar</button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <!-- Sobre nós -->
+    <section class="section-about">
+        <div class="about-us">
+            <h1>Sobre nosotros</h1>
+            <h2>Escuela Internacional para Brasileños</h2>
+            <p>Flex Major School es una escuela virtual acreditada por el Departamento de Educación de los Estados Unidos, con sede en Florida. Aquí, estudiantes de todo el mundo tienen la oportunidad de obtener un Diploma Americano de Educación Secundaria y Básica, ¡abriendo puertas a universidades internacionales y un futuro lleno de posibilidades!
+            
+
+                <br>
+
+                Estudia desde donde quieras, a tu propio ritmo, con el apoyo de un equipo dedicado a tu éxito.
+            </p>
+        </div>
+        <div class="img-container">
+            <img class="img-sobre" src="index/img/imagemSobre.svg" alt="Aluno estudando">
+        </div>
+        <div class="linha-container">
+            <a class="btn-saiba-mais" href="/sobre-nos/sobre-esp.html"><button>Learn more</button></a>
+        </div>
+    </section>
+
+    <!-- DIFENCIAIS -->
+    <section class="section-diferenciais">
+        <h1>¿Por qué elegir Flex Major?</h1>
+        <h2>Conoce nuestras diferencias</h2>
+
+
+        <div class="flex-diferenciais">
+
+            <div>
+                <div class="img-diferenciais">
+                    <img src="index/img/direcao (1) 1.png" alt="direção-icon">
+                </div>
+
+                <h3>FLEXIBILIDAD TOTAL</h3>
+                <p>Herramientas totalmente personalizables que se adaptan al estudiante.</p>
+            </div>
+            <div>
+                <div class="img-diferenciais">
+                    <img src="index/img/diploma (1) 1.png" alt="diploma-icon">
+                </div>
+
+                <h3>DIPLOMA AMERICANO</h3>
+                <p>Clases presenciales y actividades en línea que brindan más datos para el desarrollo del alumno.</p>
+            </div>
+            <div>
+                <div class="img-diferenciais">
+                    <img src="index/img/treinador 1.png" alt="">
+                </div>
+
+                <h3>ORIENTACIÓN PERSONAL
+                </h3>
+                <p>Clases presenciales y actividades en línea que brindan más datos para el desarrollo del alumno.</p>
+            </div>
+            <div>
+                <div class="img-diferenciais">
+                    <img src="index/img/metodologia 1.png" alt="metodologia-icon">
+                </div>
+
+                <h3>ACTIVE METHODOLOGY</h3>
+                <p>Diseñada para poner al alumno en el centro del proceso de aprendizaje, desarrollando disciplina, organización y enfoque.
+
+                </p>
+            </div>
+            <div>
+                <div class="img-diferenciais">
+                    <img src="index/img/bandeira.png" alt="bandeira-icon">
+                </div>
+
+                <h3>UNIV. AMERICANA</h3>
+                <p>Nuestro equipo brinda total apoyo a los estudiantes que desean postularse a universidades extranjeras.</p>
+            </div>
+            <div>
+                <div class="img-diferenciais">
+                    <img src="index/img/24-horas.png" alt="24-horas-icon">
+                </div>
+
+                <h3>ACCESO LAS 24 HORAS / DÍA</h3>
+                <p>El alumno tiene acceso 24 horas al contenido a través de una plataforma multimodal americana.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabela comparativa -->
+    <section class="section-comparativo">
+        <table>
+            <thead>
+                <tr>
+                    <th>Beneficios</th>
+                    <th style="color: #b61919; font-size: larger;">Flex <span style="color: #152a88">Major</span></th>
+                    <th>Otras escuelas online</th>
+                    <th>Escuelas tradicionales</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: justify;"><strong>Escuela 100% enfocada en estudiantes internacionales – </strong>
+                        Enseñanza adaptada para estudiantes de todo el mundo para obtener su<strong> Diploma Americano.</strong>.
+                    </td>
+                    <td class="check">✔</td>
+                    <td class="cross">❌</td>
+                    <td class="cross">❌</td>
+                </tr>
+                <tr>
+                    <td style="text-align: justify;"><strong>Doble Diplomatura –</strong> A través de equivalencias del sistema educativo del país, el estudiante cursa solo los créditos obligatorios restantes de EE.UU
+                    </td>
+                    <td class="check">✔</td>
+                    <td class="cross">❌</td>
+                    <td class="cross">❌</td>
+                </tr>
+                <tr>
+                    <td style="text-align: justify;"><strong>Ritmo de estudio flexible – </strong>Cronograma de estudio individualizado y de alta calidad.
+                    </td>
+                    <td class="check">✔</td>
+                    <td class="cross">⚠️</td>
+                    <td class="cross">❌</td>
+                </tr>
+                <tr>
+                    <td style="text-align: justify;"><strong> Mejor relación costo-beneficio del mercado –</strong> Calidad premium con inversión accesible.</td>
+                    <td class="check">✔</td>
+                    <td class="cross">⚠️</td>
+                    <td class="cross">❌</td>
+                </tr>
+                <tr>
+                    <td style="text-align: justify;"><strong>Plataforma Dinâmica e Premiada</strong> – Completa, interactiva y fácil de usar para una experiencia de aprendizaje atractiva.
+                    </td>
+                    <td class="check">✔</td>
+                    <td class="cross">⚠️</td>
+                    <td class="cross">❌</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- Seleção do programa -->
+    <section class="section-choice">
+        <h1>CONOCE NUESTROS <span class="color-text">PRINCIPALES PROGRAMAS:</span></h1>
+
+        <div class="flex-choice">
+
+            <div class="choice-item">
+                <div class="circle"><img src="/index/img/pessoa.png" alt=""></div> <!-- Círculo azul -->
+                <div class="box-choice">
+                    <h3>Middle School Internacional</h3>
+                    <ul>
+                        <li class="hei"><img class="oi" src="/index/img/4-escola (2).png" alt="">6º a 8º grado</li>
+                        <li class="hei"><img class="oi" src="/index/img/pessoa-preta.png" alt="">De 12 a 14 años</li>
+                        <li class="hei"><img class="oi" src="/index/img/2-certificado.png" alt="">Certificado Americano</li>
+                        <li class="hei"><img class="oi" src="/index/img/3-educacao.png" alt="">Modelo de Doble Certificación</li>
+                        <li class="hei"><img class="oi" src="/index/img/7-computador-desktop.png" alt="">En línea e híbrido</li>
+                    </ul>
+        
+                    <button class="button"><a href="/middle-school/middle-esp.html">Conoce más</a></button>
+                </div>
+        
+            </div>
+        
+            <div class="choice-item">
+                <div class="circle"><img src="/index/img/universidade.png" alt=""></div> <!-- Círculo azul -->
+                <div class="box-choice">
+                    <h3>High School <br>Internacional</h3>
+                    <ul>
+                        <li class="hei"><img class="oi" src="/index/img/4-escola (2).png" alt="">9º a 12º grado</li>
+                        <li class="hei"><img class="oi" src="/index/img/pessoa-preta.png" alt="">A partir de los 14 años</li>
+                        <li class="hei"><img class="oi" src="/index/img/2-certificado.png" alt="">Diploma Americano</li>
+                        <li class="hei"><img class="oi" src="/index/img/3-educacao.png" alt="">Modelo de Doble Diplomado</li>
+                        <li class="hei"><img class="oi" src="/index/img/5-globo-terrestre-com-mapas-de-continentes.png" alt="">
+                            Ceremonia de Graduación <br>Opcional en EE.UU.</li>
+                        <li class="hei"><img class="oi" src="/index/img/7-computador-desktop.png" alt="">En línea e híbrido</li>
+                    </ul>
+        
+                    <button class="button"><a href="/high-school/high-esp.html">Conoce más</a></button>
+                </div>
+        
+            </div>
+        
+            <div class="choice-item">
+                <div class="circle"><img src="/index/img/homem-de-negocios.png" alt=""></div> <!-- Círculo azul -->
+                <div class="box-choice">
+                    <h3>College <br>prep.</h3>
+                    <ul>
+                        <li class="hei"><img class="oi" src="/index/img/pilha-de-livros.png" alt="">Intercambio Vocacional</li>
+                        <li class="hei"><img class="oi" src="/index/img/2-certificado.png">Cursos y Talleres</li>
+                        <li class="hei"><img class="oi" src="/index/img/2-certificado.png" alt="">Certificado Americano</li>
+                        <li class="hei"><img class="oi" src="/index/img/pessoa-preta.png" alt="">Presencial</li>
+                        <li class="hei"><img class="oi" src="/index/img/5-globo-terrestre-com-mapas-de-continentes.png" alt="">
+                            Inmersión en Universidades</li>
+                    </ul>
+        
+                    <button class="button"><a href="/college-prep/college-prep.html">Conoce más</a></button>
+                </div>
+            </div>
+        
+        </div>
+
+            </div>
+
+        </div>
+        <div>
+    </section>
+
+    <!-- carrossel parceiros -->
+    <section class="parceiros">
+        <h1 style="margin-top: 30px; display: flex; justify-content: center; align-items: center; color: #b61919;">
+            ASOCIADA</h1>
+
+        <div class="carousel">
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="/index/img/illinoisChicago.png" alt="Imagem 1">
+                    <img src="/index/img/floridaInternational.png" alt="Imagem 2">
+                    <img src="/index/img/adelphiUniversity.png" alt="Imagem 3">
+                    <img src="/index/img/auburn.png" alt="Imagem 1">
+                    <img src="/index/img/barnard.png" alt="Imagem 2">
+                    <img src="/index/img/louisianaSU.png" alt="Imagem 3">
+                    <img src="/index/img/ringlingCollegeOfArt.png" alt="Imagem 1">
+                    <img src="/index/img/southFlorida.png" alt="Imagem 2">
+                    <img src="/index/img/tampa.png" alt="Imagem 3">
+                    <img src="/index/img/tennesse.png" alt="Imagem 1">
+                </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        <div class="carousel-button-container">
+            <a href="/" class="carousel-button">Más información</a>
+        </div>
+
+        <script>
+
+            let index = 0;
+            const visibleSlides = 3;
+            const slideStep = 100;
+
+            function moveSlide(step) {
+                const slides = document.querySelector('.carousel-images');
+                const totalItems = slides.children.length;
+                const totalPages = Math.ceil(totalItems / visibleSlides);
+
+                index = (index + step + totalPages) % totalPages;
+                slides.style.transform = `translateX(${-index * slideStep}%)`;
+            }
+
+            // Autoplay
+            let autoplay = setInterval(() => {
+                moveSlide(1); // agora ele sempre usa os dados atualizados
+            }, 3000);
+
+            // Pausar autoplay ao interagir
+            document.querySelectorAll('.prev, .next').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    clearInterval(autoplay);
+                });
+            });
+        </script>
+    </section>
+
+
+    <!-- MAPA -->
+    <div class="mapa">
+        <img class="img-banner" src="/index/img/mapa.jpg" alt="">
+    </div>
+
+   <!-- FAQ -->
+<section class="section-faq">
+    <div class="faq-container">
+        <div class="container-title">
+            <h1 class="faq-title">FAQ</h1>
+            <h2 class="faq-subtitle">Consulta las preguntas más frecuentes</h2>
+        </div>
+
+        <!-- Perguntas Frequentes -->
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Qué es Flex Major School?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">Flex Major School es una institución educativa estadounidense que ofrece a escuelas extranjeras un programa de doble certificación y diploma, permitiendo a los estudiantes completar simultáneamente el currículo de su país de origen y el currículo estadounidense. Validamos el currículo nacional, y los estudiantes deben cursar, en formato híbrido, las asignaturas obligatorias restantes para que, al finalizar los ciclos equivalentes a Middle School y High School estadounidenses, reciban una doble certificación o diploma: uno de su país y otro de Estados Unidos.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Qué asignaturas son necesarias para obtener el doble diploma?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">¿Qué asignaturas son necesarias para obtener el doble diploma?
+                    Para obtener un diploma de High School en Florida hoy en día, un estudiante debe completar 24 créditos, incluyendo 4 en Inglés, 4 en Matemáticas, 3 en Ciencias, 3.5 en Estudios Sociales, 1 en Artes, 1 en Educación Física y 7.5 créditos electivos.
+
+                    Los estudiantes internacionales, tras la validación del currículo y equivalencias, pueden convalidar hasta 18 créditos, necesitando completar un mínimo de 6 en Flex Major School. En la mayoría de los países, normalmente se requiere que los estudiantes internacionales cursen: cuatro créditos de Inglés, además de materias como Historia de EE.UU., Gobierno y Política, Economía e Introducción a las Finanzas.
+
+                    Para Middle School, los estudiantes internacionales en el programa de Doble Certificación deben completar un mínimo de tres créditos—uno en cada una de las siguientes áreas: Inglés, Matemáticas y Ciencias.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Cuáles son los costos del programa?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">Existen diferentes métodos de pago. Los estudiantes deben pagar una matrícula anual en dólares estadounidenses, además de la mensualidad pagada directamente a la escuela asociada.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Qué es el SAT?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">El SAT, también conocido como Scholastic Aptitude/Assessment Test, es un examen educativo estandarizado estadounidense que evalúa conocimientos y habilidades en matemáticas, lectura y escritura, con una redacción opcional. Es ampliamente utilizado como criterio de admisión por universidades en Estados Unidos, aunque no es el único factor considerado y es opcional para estudiantes internacionales en la mayoría de las universidades.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Qué es el ACT?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">El ACT (American College Testing) es un examen estandarizado ampliamente aceptado por universidades en Estados Unidos y otros países para la admisión a programas de grado. Evalúa habilidades en inglés, matemáticas, lectura, ciencias y, opcionalmente, redacción.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Qué son los exámenes AP?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">Los <strong>Exámenes AP (Advanced Placement Exams)</strong> son pruebas estandarizadas ofrecidas por el College Board en EE.UU. e internacionalmente. Evalúan conocimientos en materias específicas a nivel universitario y pueden otorgar créditos académicos en diversas universidades.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMECE AGORA -->
+<section class="section-comece">
+    <div class="container-comece">
+        <div class="div-container-img">
+            <img src="/index/img/image (1) 1.png" alt="">
+        </div>
+        <div class="div-container-txt">
+            <h1>¡EMPIEZA AHORA!</h1>
+            <h2>Educación de alta calidad con certificación americana</h2>
+            <p>Con nuestro programa de doble diploma, los estudiantes pueden completar la secundaria en su país de origen mientras obtienen simultáneamente un diploma estadounidense. El programa ofrece un currículo de EE.UU. que complementa sus estudios locales, permitiendo a los estudiantes cursar solo los créditos necesarios para cumplir con los requisitos de graduación de EE.UU.</p>
+            <button><a href="/sobre-nos/sobre-esp.html">Conoce más</a></button>
+        </div>
+    </div>
+</section>
+
+
+     <!-- WhatsApp - ícone fixo -->
+     <div class="wpp-fixo">
+        <a href="https://api.whatsapp.com/send?phone=14079893636&text=Hello,%20I%20found%20you%20through%20your%20Website"
+            target="_blank" rel="noopener noreferrer">
+            <img src="/album/img/whatsapp (2).png" alt="Fale conosco no WhatsApp" />
+        </a>
+    </div>
+
+    <!-- Para PHP -->
+    <!-- <?php include 'footer.html'; ?> -->
+
+    <!-- <footer id="footer-placeholder"></footer> --> <!-- Aqui o footer será carregado -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="paragrafo1">Localización</p>
+                <ul class="localizacao">
+                    <li>1878 Thetford Rd</li>
+                    <li>Orlando/FL</li>
+                    <li>32824</li>
+                </ul>
+            </div>
+            <div class="footer-centro">
+                <div class="footer-logo">
+                    <a href="/index-spanish.html">
+                        <img src="/footer/img/logo-branca-footer.png" alt="">
+                    </a>
+                </div>
+                <div class="footer-redes-sociais">
+                    <a target="_blank" href="https://www.instagram.com/flexmajorschool/">
+                        <img src="/index/img/instagram.svg" alt="instagram">
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/Flex-Major-School-102353782292788">
+                        <img src="/index/img/facebook.svg" alt="facebook">
+                    </a>
+                    <a target="_blank" style="width: 27px; height: 27px;" href="hhttps://www.linkedin.com/company/flex-major-school/">
+                        <img src="/index/img/linkedin32.png" alt="linkedin">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-rigth">
+                <p class="footer-email">flex@flexmajorschool.com</p>
+                <ul class="lista-school">
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/middle-school/middle-esp.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            Middle School
+                        </a>
+                    </li>
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/high-school/high-esp.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            High School
+                        </a>
+                    </li>
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/college-prep/college-esp.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            College Prep.
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <div>Flex Major School™ 2025 – All Rights Reserved</div>
+            <div>Developed by <a target="_blank" href="https://www.linkedin.com/in/caio-farinha-904aab25b/">Caio Farinha™</a> & <a
+                    href="">Victor Hugo™</a></div>
+        </div>
+    </footer>
+
+    <script src="/navbar/js/script.js"></script>
+</body>
+
+</html>

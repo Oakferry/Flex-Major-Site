@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .beneficios {
+            width: 100%;
+            background-color: #fff;
+            padding: 60px 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .container-beneficts {
+            display: flex;
+            flex-wrap: wrap;
+            width: 70%;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+
+        .controle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+            padding-right: 20px;
+        }
+
+        .linha-1,
+        .linha-2,
+        .linha-3 {
+            width: 8px;
+            border-radius: 12px;
+            animation: grow 1s ease forwards;
+            transform: scaleY(0);
+            transform-origin: top;
+        }
+
+        .linha-1 {
+            height: 130px;
+            background-color: #0C0C9E;
+            animation-delay: 0.2s;
+        }
+
+        .linha-2 {
+            height: 130px;
+            background-color: #AE1C1C;
+            animation-delay: 0.45s;
+        }
+
+        .linha-3 {
+            height: 130px;
+            background-color: #E6F5F5;
+            animation-delay: 0.65s;
+        }
+
+        @keyframes grow {
+            to {
+                transform: scaleY(1);
+            }
+        }
+
+        .controle-content {
+            flex: 1;
+        }
+
+        .controle-content>h3 {
+            text-align: center;
+            padding-bottom: 20px;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #1A1A1A;
+            line-height: 1.4;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 15px;
+            max-width: 1200px;
+            /* Opcional: limita a largura */
+            padding: 2px 20px;
+        }
+
+        .benefit svg {
+            width: 32px;
+            height: 32px;
+            color: #0C0C9E;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .benefit p {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .benefit b {
+            color: #0C0C9E;
+        }
+
+        @media (max-width: 768px) {
+            .container-beneficts {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .controle {
+                flex-direction: row;
+                gap: 10px;
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .linha-1,
+            .linha-2,
+            .linha-3 {
+                height: 8px;
+                width: 90px;
+            }
+
+            .controle-content>h3 {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="beneficios">
+        
+        <div class="container-beneficts">
+            <div class="controle">
+                <div class="linha-1"></div>
+                <div class="linha-2"></div>
+                <div class="linha-3"></div>
+            </div>
+            <div class="controle-content">
+                <h3>Benefícios de ser um aluno da Flex Middle School</h3>
+
+                <div class="benefit">
+                    <!-- Medalha -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 0v6l3-2 3 2v-6" />
+                    </svg>
+                    <p><b>Dupla Certificação</b> – Aproveitando as equivalências do ensino do seu país, o aluno cursa
+                        apenas três créditos obrigatórios.</p>
+                </div>
+
+                <div class="benefit">
+                    <!-- Relógio -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 6v6l4 2" />
+                        <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <p><b>Ritmo de estudo flexível</b> – Cronograma de estudos individualizado e de alta qualidade.</p>
+                </div>
+
+                <div class="benefit">
+                    <!-- Dinheiro -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 8v8m-4-4h8" />
+                        <rect x="2" y="6" width="20" height="12" rx="2" />
+                    </svg>
+                    <p><b>Melhor custo-benefício do mercado</b> – Qualidade premium com investimento acessível.</p>
+                </div>
+
+                <div class="benefit">
+                    <!-- Laptop -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <rect x="2" y="4" width="20" height="14" rx="2" />
+                        <path d="M2 18h20" />
+                    </svg>
+                    <p><b>Plataforma Dinâmica e Premiada</b> – Completa, interativa e fácil de usar para uma experiência
+                        de aprendizado envolvente.</p>
+                </div>
+
+                <div class="benefit">
+                    <!-- Livro -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                        <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z" />
+                    </svg>
+                    <p><b>Disciplinas Eletivas</b> – Os alunos podem explorar um catálogo completo e expandir seus
+                        conhecimentos sem custo adicional.</p>
+                </div>
+
+                <div class="benefit">
+                    <!-- Avião -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M2.5 19L21 12 2.5 5 4 10l14 2-14 2z" />
+                    </svg>
+                    <p><b>Intercâmbios acadêmicos vinculados</b> – Oportunidades internacionais para enriquecer a
+                        formação do aluno.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+* {
+    max-width: 100%;
+}
+
+/* BANNER - Flex Major School */
+
+.banner-middle {
+    background-image: url('/sobre-nos/img/sobre-banner.png') !important;
+}
+
+.container-middle {
+    position: relative;
+    z-index: 2;
+    /* ConteÃºdo fica acima do fundo */
+}
+
+.content-middle h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    /* DÃ¡ profundidade no texto */
+}
+
+.content-middle p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Um "escurecimento" de fundo para dar profundidade */
+.banner-middle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Camada escura sobre a imagem */
+    z-index: 1;
+}
+
+/* primeira seção */
+.primeira-secção {
+    width: 100%;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+.containertitulo {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tituloprincipal {
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* responsivo */
+    color: #154a78;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.containertitulo p {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: #333;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+
+.quadrado {
+    width: 100vw;
+    padding: 20px 0;
+    background-color: #154a78;
+    margin-top: 40px;
+}
+
+.parceiros {
+    padding: 40px !important;
+}
+
+/* ------------------ */
+
+.afiliados {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.tituloafiliados {
+    text-align: center;
+    color: #154a78;
+    margin-bottom: 20px;
+}
+
+.containerafiliados {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.containerafiliados>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 220px;
+}
+
+.numeros {
+    color: #B41819;
+    font-size: 45px;
+    margin-bottom: 2px;
+    font-weight: 700;
+}
+
+.formatacao {
+    color: #01305a;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+
+.formatacaoimg {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+    border-radius: 30% 20px;
+}
+
+
+
+
+
+/* Integrantes */
+.equipe {
+    max-width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.equipe h1{
+    color: #154a78;
+    margin-bottom: 35px;
+}
+
+.container-equipe {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container-equipe .integrante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+/* Trata o caso do meio (Paulo e Léticia) */
+.integrante .integrante-meio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Imagens redondas iguais */
+.integrante img,
+.integrante-meio img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos nomes */
+.integrante p,
+.integrante-meio p {
+    margin: 0;
+    font-weight: 500;
+    color: #333;
+    font-size: 16px;
+}
+
+
+
+.integrante .integrante-meio>img {
+    max-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    align-items: center;
+}

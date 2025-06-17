@@ -1,0 +1,175 @@
+/* BANNER - Flex Major School */
+
+.banner-cobrancas {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa a altura da tela inteira */
+    background-image: url('/cobranca/img/cobranca-banner.jpeg');
+    background-attachment: fixed; /* Efeito parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+
+.container-cobrancas {
+    position: relative;
+    z-index: 2; /* Conteúdo fica acima do fundo */
+}
+
+.content-cobrancas h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* Dá profundidade no texto */
+}
+
+.content-cobrancas p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* Um "escurecimento" de fundo para dar profundidade */
+.banner-cobrancas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* Camada escura sobre a imagem */
+    z-index: 1;
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+    .banner-cobrancas {
+        height: 60vh;
+        background-attachment: scroll; /* Desativa parallax no mobile para evitar bugs */
+    }
+    .content-cobrancas h1 {
+        font-size: 2rem;
+    }
+    .content-cobrancas p {
+        font-size: 1.2rem;
+    }
+}
+
+/* FAQ - Flex Major School */
+
+.section-faq-cobrancas {
+    padding: 40px;
+}
+
+/* Títulos */
+.container-title-faq {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin-left: 125px;
+}
+
+.faq-title-co {
+    color: #B41819;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.faq-subtitle-co {
+    color: #003d82;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* Lista de FAQ */
+.faq-list-cobrancas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 860px;
+    margin: auto;
+}
+
+/* Cada botão de pergunta */
+.faq-cobrancas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    color: #003d82;
+    border-radius: 8px;
+    font-size: medium;
+    font-weight: bold;
+    text-align: left;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Hover no botão */
+.faq-cobrancas:hover {
+    background: #f0f0f0;
+}
+
+/* Ícone de toggle + ou - */
+.faq-toggle-plus,
+.faq-toggle {
+    color: #B41819;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Resposta oculta por padrão */
+.faq-answer-cobrancas {
+    display: none;
+    padding: 15px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    border-radius: 8px;
+    font-size: medium;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+.btn-pague{
+    background-color: #B41819;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, transform 0.3s; /* Transição suave */
+
+}
+
+/* Quando ativo, mostrar resposta */
+.faq-item-cobrancas.active .faq-answer-cobrancas {
+    display: block;
+}
+
+/* Animação suave na resposta */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

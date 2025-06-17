@@ -1,0 +1,160 @@
+/* Footer geral */
+footer {
+    margin-top: 20px;
+}
+
+/* Footer controlador de posição */
+.footer-container {
+    background-color: #172c5e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+    height: 200px;
+}
+
+/* parte esquerda, com as localizações */
+.footer-container .footer-left {
+    color: rgb(253, 253, 253);
+    margin: 10px;
+    margin-left: 15px;
+}
+
+/* paragrafo na parte esquerda */
+.footer-left>.paragrafo1 {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.localizacao {
+    list-style: none;
+}
+
+/* parte central do footer, aonde tem a logo e as redes sociais - posicionados em coluna */
+.footer-container .footer-centro {
+    display: flex;
+    flex-direction: column;
+}
+
+/* div da logo */
+.footer-centro>.footer-logo {
+    width: 350px;
+    width: 250px;
+    padding: 10px;
+}
+
+.footer-centro>.footer-redes-sociais {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 10px 10px;
+
+}
+
+.footer-right {
+    color: rgb(252, 252, 252);
+    margin: 10px;
+    margin-right: 15px;
+
+}
+
+.list-rigth>img {
+    width: 15px;
+    height: 15px;
+    padding: 1px;
+    margin-right: 2px;
+}
+
+.footer-email {
+    color: rgb(252, 252, 252);
+    margin-right: 10px;
+}
+
+.lista-topico {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.lista-school .lista-topico>.list-rigth {
+    display: flex;
+    color: rgb(255, 255, 255);
+}
+
+.sub-footer {
+    background-color: #39579e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: rgb(177, 177, 177);
+    max-width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    object-fit: cover;
+    padding: 5px 20px 5px 20px;
+}
+
+.sub-footer div>a {
+    color: rgb(206, 206, 206);
+}
+
+/* Media Query para telas menores (mobile) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        /* Coloca os elementos em coluna */
+        height: auto;
+        /* Ajusta a altura automaticamente */
+        padding: 20px 0;
+        /* Adiciona padding vertical */
+    }
+
+    .footer-container .footer-left,
+    .footer-container .footer-centro,
+    .footer-container .footer-right {
+
+        text-align: center;
+        /* Centraliza o texto */
+        margin: 10px 0;
+        /* Ajusta as margens */
+    }
+
+    .footer-centro>.footer-redes-sociais {
+        justify-content: center;
+        /* Centraliza as redes sociais */
+
+    }
+
+    .footer-centro .footer-redes-sociais>a {
+        /* Centraliza as redes sociais */
+        padding: 4px;
+    }
+
+
+
+    .footer-right {
+        text-align: center;
+        /* Centraliza o texto no footer-right */
+    }
+
+    .sub-footer {
+        flex-direction: column;
+        /* Coloca os elementos do sub-footer em coluna */
+        height: auto;
+        /* Ajusta a altura automaticamente */
+        padding: 10px;
+        /* Ajusta o padding */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .footer-email {
+        margin-right: 0px;
+    }
+
+    .lista-topico {
+        list-style: none;
+        margin-left: 30px;
+    }
+}

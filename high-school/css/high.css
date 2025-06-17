@@ -1,0 +1,212 @@
+* {
+    max-width: 100%;
+}
+
+/* BANNER - Flex Major School */
+
+.banner-middle {
+    background-image: url('/high-school/img/banner-high.png') !important;
+}
+
+.content-middle h1 {
+
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    /* DÃ¡ profundidade no texto */
+}
+
+.content-middle p {
+
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Um "escurecimento" de fundo para dar profundidade */
+.banner-middle::before {
+
+    background: rgba(0, 0, 0, 0.4);
+    /* Camada escura sobre a imagem */
+
+}
+
+/* Main - middle */
+
+
+.container-texto>h1 {
+    color: #B41819;
+}
+
+.container-texto>h2 {
+    color: #1A629C;
+}
+
+.btn-middle {
+
+    color: white;
+
+}
+
+.btn-middle button {
+    background-color: #1b4f8a;
+    /* background-color: #0056b3; */
+    color: white;
+}
+
+.btn-middle button:hover {
+    background-color: #0a3e7a;
+    color: #fff;
+}
+
+
+/* Estiliza o fundo da seção com um degradê vermelho escuro */
+.background-red {
+    background: linear-gradient(135deg, #1A629C, #0f1681) !important;
+}
+
+
+/* Estiliza cada item (bloco com ícone + texto) */
+.topicos {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* sombra suave */
+
+}
+
+/* Efeito de hover: o bloco “sobe” levemente e a sombra aumenta */
+.topicos:hover {
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    /* sombra mais intensa */
+}
+
+/* Estiliza os ícones dentro dos tópicos */
+.topicos img {
+
+    background: white;
+    /* fundo branco */
+}
+
+
+.background-red h3 span {
+    border: 5px solid rgb(189, 15, 15) !important;
+}
+
+
+/* ---------------------------- */
+
+.img-creditos img {
+    width: 95% !important;
+    height: 350px !important;
+}
+
+.creditos-modern h3 {
+    color: #8a1b1b !important;
+    margin-bottom: 20px !important;
+}
+
+.creditos-modern h4 {
+    color: #1b4f8a !important;
+    text-align: center;
+    margin: 10px 80px 50px 80px;
+    padding: 0px 80px 0px 80px;
+}
+
+.creditos-tabela-modern {
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.creditos-tabela-modern thead th {
+    background-color: #cc2929 !important;
+    color: #f5eeee !important;
+    padding: 13px 19px !important;
+}
+
+.creditos-tabela-modern tbody td {
+    padding: 12px 18px !important;
+    font-size: 13px !important;
+    color: #444;
+    background-color: #fff;
+    border-top: 1px solid #ad1919 !important;
+}
+
+
+.creditos-tabela-modern tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+.parceiros {
+    background: #fafeff;
+    background: linear-gradient(90deg, rgb(248, 254, 255) 0%, #fcfcff 50%, rgb(249, 248, 255) 100%);
+}
+
+.parceiros h1 {
+    color: #b61919;
+}
+
+.beneficios {
+    background-color: #ffffff;
+}
+
+.controle-content>h3 {
+    color: #B61919;
+}
+
+.benefit svg {
+    color: #0C0C9E;
+}
+
+.benefit p {
+    color: #444;
+}
+
+.benefit b {
+    color: #0C0C9E;
+}
+
+
+.lista-requisitos {
+    color: #444;
+}
+
+.impacto-section {
+    background: #fff;
+}
+
+.titulo-secao {
+    color:#B41819 !important;
+}
+
+.carousel-videos::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.video-card {
+    background: #fdfdfd;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+.video-card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.video-frame {
+    background-color: #000;
+}
+
+.video-info {
+    background-color: #fff;
+}
+
+.video-nome {
+    color: #111;
+}
+
+.video-legenda {
+    color: #555;
+}
+
+
+@media screen and (max-width: 600px) {
+    .creditos-modern h4 {
+        margin: 10px;
+        padding: 0px;
+    }
+}

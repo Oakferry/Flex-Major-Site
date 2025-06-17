@@ -1,0 +1,129 @@
+/* style-roteiro-responsive.css */
+
+/* Estilos gerais para telas menores (smartphones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+
+    .container-prinp {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .imgprinp img {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+
+    .container-section, .container-sectionUm {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .image-container img {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .section, .sectionDois {
+        margin-bottom: 20px;
+    }
+
+    .containerTres {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .accommodation {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .imageTres {
+        width: 100%; /* Aumenta a largura para 100% do contêiner */
+        height: auto; /* Mantém a proporção da imagem */
+        max-height: none; /* Aumenta a altura máxima para 400px */
+        margin: 20px 0; /* Aumenta a margem vertical */
+    }
+    .titleTres {
+        font-size: 40px; /* Reduz o tamanho da fonte do título */
+        text-align: center;
+    }
+    
+
+    .containerQua {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .sectionQua, .sectionQui {
+        margin-bottom: 20px;
+    }
+
+    .botaowhats {
+        width: 40%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .containerSex {
+        padding: 20px;
+    }
+
+    .formas {
+        flex-direction: column;
+    }
+
+    .formas div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .botao {
+        flex-direction: column;
+    }
+
+    .botao button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .botaowhats{
+        font-size: 16px; /* Reduz o tamanho da fonte do botão */
+        padding: 10px;
+    }
+    .container-sectionUm {
+        width: 100vw; /* ocupa toda a largura da tela */
+        padding: 20px; /* padding padrão */
+        box-sizing: border-box; /* inclui o padding dentro do width */
+    }
+    .container-sectionUm h2, 
+    .container-sectionUm p, 
+    .container-sectionUm div {
+        word-break: normal; 
+        text-align: center; 
+        font-size: 18px; 
+    }
+
+    .container-section {
+        width: 100vw; /* ocupa toda a largura da tela */
+        padding: 20px; /* padding padrão */
+        box-sizing: border-box; /* inclui o padding dentro do width */
+    }
+    .container-section h2, 
+    .container-section p, 
+    .container-section div {
+        word-break: normal; 
+        text-align: center; 
+        font-size: 18px; 
+    }
+
+}

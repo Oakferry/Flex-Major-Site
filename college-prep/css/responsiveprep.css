@@ -1,0 +1,67 @@
+/* Ajustes específicos para telas pequenas */
+@media screen and (max-width: 600px) {
+    .banner-college {
+        background-attachment: local;
+    }
+
+
+    .container-texto>p {
+        padding: 10px 0px;
+    }
+
+    .banner-imerssion {
+        padding: 1.5rem 1rem;
+        background-attachment: scroll;
+        /* desativa fixed para evitar bugs em iOS */
+    }
+
+    .img-college {
+        /* flex: 1; */
+        min-height: auto;
+    }
+
+    .container-imerssion {
+        padding: 0;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 425px;
+    }
+
+    .card-imerssion {
+        padding: 2rem 1rem;
+        border-radius: 12px;
+    }
+
+    .collegeprep-title {
+        font-size: 2rem;
+    }
+
+    .collegeprep-sub {
+        font-size: 1.1rem;
+    }
+
+    .collegeprep-links {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    .btn-modern {
+        font-size: 0.95rem;
+        padding: 0.9rem 1rem;
+        text-align: center;
+    }
+
+    .descricao-imerssion {
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: justify;
+    }
+
+    .tituloed {
+        padding: 0px 10px;
+    }
+    .subed {
+        padding: 0 10px;
+    }
+}

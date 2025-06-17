@@ -1,0 +1,611 @@
+* {
+    max-width: 100%;
+}
+
+/* BANNER - Flex Major School */
+
+.banner-middle {
+    box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    /* Ocupa a altura da tela inteira */
+    background-image: url('/middle-school/img/banner-middle.png');
+    background-attachment: fixed;
+    /* Efeito parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+
+.container-middle {
+    position: relative;
+    z-index: 2;
+    /* ConteÃºdo fica acima do fundo */
+}
+
+.content-middle h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    /* DÃ¡ profundidade no texto */
+}
+
+.content-middle p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Um "escurecimento" de fundo para dar profundidade */
+.banner-middle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Camada escura sobre a imagem */
+    z-index: 1;
+}
+
+/* Main - middle */
+main {
+    margin: 45px 0;
+    box-sizing: border-box;
+}
+
+.sobre-middle {
+    width: 100%;
+    display: flex;
+    margin: 10px 0 55px 0;
+}
+
+.container-sobre {
+    margin: 0 auto;
+    /* Centralizar */
+    display: flex;
+    align-items: center;
+    /* alinha verticalmente */
+    justify-content: space-between;
+    /* espaço entre os elementos */
+    flex-wrap: wrap;
+    /* permite quebrar em telas menores */
+    gap: 7rem;
+    /* opcional: espaço entre as divs */
+    width: 85%;
+}
+
+.container-texto>h1 {
+    color: #B41819;
+}
+
+.container-texto>h2 {
+    color: #1A629C;
+}
+
+.container-texto>p {
+    padding: 10px 15px 10px 0px;
+    text-align: justify;
+}
+
+.btn-middle {
+
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.btn-middle button {
+    background-color: #1b4f8a;
+    /* background-color: #0056b3; */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 0;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.btn-middle button:hover {
+    background-color: #0a3e7a;
+    padding: 9px 17px;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.container-texto,
+.img-middle {
+    flex: 1;
+    min-width: 300px;
+    min-height: 350px;
+    /* ajustável conforme layout */
+}
+
+.img-middle img {
+    width: 65vw;
+    height: 70vh;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Importa uma fonte moderna e sem serifa para o layout */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Estiliza o fundo da seção com um degradê vermelho escuro */
+.background-red {
+    background: linear-gradient(135deg, #8b0000, #b30000);
+    /* gradiente diagonal */
+    padding: 30px 20px 80px 20px;
+    /* espaçamento interno */
+    color: white;
+    /* cor do texto */
+    font-family: 'Inter', sans-serif;
+    /* define a fonte principal */
+}
+
+
+
+/* Define o layout dos tópicos como um grid responsivo */
+.container-topicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(215px, 2fr));
+    /* colunas adaptáveis */
+    gap: 30px;
+    /* espaçamento entre os blocos */
+    max-width: 1150px;
+    /* largura máxima */
+    margin: 0 auto;
+    /* centraliza horizontalmente */
+    text-align: left;
+    /* alinha o texto à esquerda */
+}
+
+/* Estiliza cada item (bloco com ícone + texto) */
+.topicos {
+    display: flex;
+    /* layout em linha: ícone + texto */
+    align-items: center;
+    /* alinha verticalmente */
+    gap: 16px;
+    /* espaço entre ícone e texto */
+    background: rgba(255, 255, 255, 0.05);
+    /* leve fundo branco transparente */
+    padding: 20px;
+    /* espaçamento interno */
+    border-radius: 16px;
+    /* bordas arredondadas */
+    backdrop-filter: blur(10px);
+    /* efeito vidro fosco */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* animação suave ao passar o mouse */
+}
+
+/* Efeito de hover: o bloco “sobe” levemente e a sombra aumenta */
+.topicos:hover {
+    transform: translateY(-5px);
+    /* sobe 5px */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    /* sombra mais intensa */
+}
+
+/* Estiliza os ícones dentro dos tópicos */
+.topicos img {
+    width: 48px;
+    /* largura */
+    height: 48px;
+    /* altura */
+    background: white;
+    /* fundo branco */
+    padding: 10px;
+    /* espaço interno */
+    border-radius: 50%;
+    /* forma circular */
+    object-fit: contain;
+    /* mantém proporção do ícone */
+}
+
+/* Estiliza o texto ao lado do ícone */
+.topicos p {
+    margin: 0;
+    /* remove margem padrão */
+    font-size: 1rem;
+    /* tamanho de fonte */
+    font-weight: 500;
+    /* peso intermediário */
+    color: white;
+    /* cor do texto */
+}
+
+/* Estiliza o título "CARACTERÍSTICAS" */
+.background-red h3 {
+    text-align: center;
+    /* centraliza */
+    font-size: 1.5rem;
+    /* tamanho grande */
+    margin-bottom: 50px;
+    /* espaço abaixo do título */
+    font-weight: 600;
+    /* peso mais forte */
+}
+
+.background-red h3 span {
+    font-size: 1.5rem;
+    /* tamanho grande */
+    font-weight: 700;
+    /* peso mais forte */
+    padding: 2px;
+    /* background-color: rgba(25, 0, 255, 0.699); */
+    border-radius: 50% 50%;
+    border: 5px solid  rgba(26, 97, 155, 0.712);
+}
+
+
+/* ---------------------------- */
+
+.creditos-modern {
+    width: 100%;
+    margin: 50px 0 70px 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.creditos-modern h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    /* color: #1b4f8a; */
+    color:#B41819;
+    margin-bottom: 70px;
+}
+
+.container-creditos-modern {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.img-creditos {
+    flex: 1;
+    min-width: 300px;
+    min-height: 350px;
+}
+
+.img-creditos img {
+    width: 55vw;
+    height: 57vh;
+    border-radius: 10px;
+    object-fit: cover;
+    
+}
+
+.creditos-table-wrapper {
+    flex: 1;
+    max-width: 60vw;
+    overflow-x: auto;
+}
+
+.creditos-tabela-modern {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 55vw;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.creditos-tabela-modern thead th {
+    background-color: #5089c2;
+    color: #f5eeee;
+    text-align: left;
+    padding: 15px;
+    font-weight: 550;
+    font-size: 16px;
+}
+
+
+.creditos-tabela-modern tbody td {
+    padding: 10px 20px;
+    font-size: 12px;
+    color: #444;
+    background-color: #fff;
+    border-top: 1px solid #192fad;
+}
+
+.creditos-tabela-modern tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+.creditos-tabela-modern td:last-child {
+    text-align: right;
+}
+
+.parceiros {
+    background: #fafeff;
+    background: linear-gradient(90deg, rgb(248, 254, 255) 0%, #fcfcff 50%, rgb(249, 248, 255) 100%);
+}
+
+.parceiros h1 {
+
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b61919;
+}
+
+.beneficios {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 60px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.container-beneficts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 55%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.controle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding-right: 20px;
+}
+
+/* .linha-1,
+  .linha-2,
+  .linha-3 {
+    width: 8px;
+    border-radius: 12px;
+    animation: grow 1s ease forwards;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  
+  .linha-1 {
+    height: 131px;
+    background-color: #0C0C9E;
+    animation-delay: 0.2s;
+  }
+  
+  .linha-2 {
+    height: 132px;
+    background-color: #AE1C1C;
+    animation-delay: 0.45s;
+  }
+  
+  .linha-3 {
+    height: 133px;
+    background-color: #E6F5F5;
+    animation-delay: 0.65s;
+  } */
+
+.linha-1,
+.linha-2,
+.linha-3 {
+    width: 8px;
+    border-radius: 12px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.6s ease;
+}
+
+.linha-1 {
+    /* animation: grow 1s ease forwards;
+    animation-delay: 0.2s; */
+    margin-top: 23px;
+    height: 131px;
+    background-color: #0C0C9E;
+}
+
+.linha-2 {
+    /* animation: grow 1s ease forwards;
+    animation-delay: 0.5s; */
+    height: 132px;
+    background-color: #AE1C1C;
+}
+
+.linha-3 {
+    /* animation: grow 1s ease forwards;
+    animation-delay: 0.7s; */
+    height: 133px;
+    background-color: #E6F5F5;
+}
+
+
+
+@keyframes grow {
+    to {
+        transform: scaleY(1);
+    }
+}
+
+.controle-content {
+    flex: 1;
+}
+
+.controle-content>h3 {
+    text-align: left;
+    padding-left:  20px;
+    padding-bottom: 18px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color:#B61919;
+    line-height: 1.4;
+
+}
+
+.benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 15px;
+    max-width: 1200px;
+    /* Opcional: limita a largura */
+    padding: 2px 20px;
+}
+
+.benefit svg {
+    width: 32px;
+    height: 32px;
+    color: #0C0C9E;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.benefit p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.benefit b {
+    color: #0C0C9E;
+}
+
+.quem-pode-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.quem-pode-texto {
+    flex: 1 1 300px;
+    max-width: 500px;
+}
+
+.titulo-secao {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color:#1849b4;
+}
+
+.lista-requisitos {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.imagem-ilustrativa {
+    flex: 1 1 300px;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.impacto-section {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.titulo-secao {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #B41819;
+    letter-spacing: 0.5px;
+}
+
+.carousel-videos {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    overflow-x: auto;
+    padding-bottom: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.carousel-videos::-webkit-scrollbar {
+    height: 6px;
+}
+
+.carousel-videos::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.video-card {
+    flex: 0 0 auto;
+    width: 260px;
+    background: #fdfdfd;
+    border-radius: 20px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: start;
+}
+
+.video-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.video-frame {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    background-color: #000;
+}
+
+.video-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    display: block;
+}
+
+.video-info {
+    padding: 16px 14px 18px;
+    background-color: #fff;
+    text-align: left;
+}
+
+.video-nome {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 6px;
+}
+
+.video-legenda {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+

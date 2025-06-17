@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+
+
+    <link rel="shortcut icon" href="/index/img/LOGO.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="/index/css/style.css">
+    <link rel="stylesheet" href="/index/css/style-index-responsive.css">
+    <link rel="stylesheet" href="/navbar/css/navbar.css">
+    <link rel="stylesheet" href="/sobre-nos/css/sobre-nos.css">
+    <link rel="stylesheet" href="/middle-school/css/middle.css">
+    <link rel="stylesheet" href="/footer/css/footer.css">
+    <link rel="stylesheet" href="/sobre-nos/css/sobre-responsive.css">
+
+
+
+    <style>
+        .wpp-fixo {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+
+        .wpp-fixo a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .wpp-fixo img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        /* Tooltip acima */
+        .wpp-fixo a::after {
+            content: "Fale conosco";
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 6px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            opacity: 0;
+            white-space: nowrap;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        /* Setinha para baixo (abaixo do balão) */
+        .wpp-fixo a::before {
+            content: "";
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .wpp-fixo a:hover::after,
+        .wpp-fixo a:hover::before {
+            opacity: 1;
+        }
+
+        /* Animação pulsante */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <section class="barraSuperior">
+
+        <!-- Right section -->
+        <div class="rigthSide">
+
+            <!-- Flags -->
+            <div class="bandeiraIdioma">
+                <a href="/sobre-nos/sobre-nos.html" class="brasil">
+                    <img src="/index/img/brasil (1).png" alt="br">
+                </a>
+                <a href="/sobre-nos/sobre-eng.html" class="eua">
+                    <img src="/index/img/estados-unidos24.png" alt="en">
+                </a>
+                <a href="/sobre-nos/sobre-esp.html" class="espanha">
+                    <img src="/index/img/espanha24.png" alt="es">
+                </a>
+            </div>
+
+            <!-- Social media links -->
+            <div class="redeSociais ms-3">
+                <a target="_blank" href="https://www.instagram.com/flexmajorschool/" class="text-white">
+                    <img src="/index/img/instagram.svg" alt="instagram">
+                </a>
+                <a href="https://www.facebook.com/Flex-Major-School-102353782292788" class="text-white ms-1">
+                    <img src="/index/img/facebook.svg" alt="facebook">
+                </a>
+                <a href="https://www.linkedin.com/company/flex-major-school/" class="text-white ms-1">
+                    <img src="/index/img/linkedin32.png" alt="linkedin">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <header class="header2" id="header">
+        <a id="logo" href="/index.html">
+            <img src="/index/img/LOGO.svg" alt="">
+        </a>
+        <nav id="nav">
+            <button aria-label="Abrir menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li class="dropdown">
+                    <a class="mexer" href="/">Choose your program
+                        <img src="/index/img/seta-para-baixo.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/middle-school/middle-ing.html">Middle School</a></li>
+                        <li><a href="/high-school/high-eng.html">High School</a></li>
+                        <li><a href="/college-prep/college-eng.html">College Prep</a></li>
+                    </ul>
+                </li>
+                <li><a href="/sobre-nos/sobre-eng.html">About us</a></li>
+                <li><a href="/album/album-english.html">Album</a></li>
+                <li><a href="/partnership/partnership-school-english.html">Become a Partner School</a></li>
+                <li class="link-album-mobile">
+
+                    <!-- Mudar idioma -->
+                    <a href="/sobre-nos/sobre-nos.html" class="text-white me-3"> <img src="/index/img/brasil (1).png"
+                            alt="br"></a>
+                    <a href="/sobre-nos/sobre-eng.html" class="text-white"> <img src="/index/img/estados-unidos24.png"
+                            alt="en"></a>
+                    <a href="/sobre-nos/sobre-esp.html" class="text-white"> <img src="/index/img/espanha24.png"
+                            alt="es"></a>
+                </li>
+                <li class="redeSociais-mobile">
+                    <a target="_blank" href="https://www.instagram.com/flexmajorschool/" class="text-white ">
+                        <img src="/index/img/instagram-mobile.png" alt="instagram">
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/Flex-Major-School-102353782292788"
+                        class="text-white ms-1">
+                        <img src="/index/img/facebook-mobile.png" alt="facebook">
+                    </a>
+                    <a target="_blank" href="hhttps://www.linkedin.com/company/flex-major-school/"
+                        class="text-white ms-1 " style="object-fit: cover;">
+                        <img src="/index/img/linkedin-mobile (1).png" alt="LINKEDIN">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <script src="/navbar/js/script.js"></script>
+
+    <!-- Banner -->
+    <section class="banner-middle">
+        <div class="container-middle">
+            <div class="content-middle">
+                <h1>About us</h1>
+            </div>
+        </div>
+    </section>
+
+    <main>
+
+        <div class="primeira-secção">
+
+            <div class="containertitulo">
+
+                <h1 class="tituloprincipal">Global Education for a Borderless Future
+                </h1>
+                <p>
+                    Through personalized teaching on digital platforms, our team of coordinators and teachers provides
+                    individualized support so that each student can develop their skills and earn an American High
+                    School Diploma.
+                    We believe that a globalized student has a greater chance of standing out in the academic and
+                    professional landscape. That’s why our commitment goes beyond certification: we promote personal and
+                    professional development of excellence, preparing our students for a future full of opportunities.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="quadrado">
+        </div>
+
+        <!-- Carrusel de Socios -->
+        <section class="parceiros">
+            <h1 style="color: #154a78;;">Partner Universities</h1>
+
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="/index/img/illinoisChicago.png" alt="University of Illinois at Chicago">
+                        <img src="/index/img/floridaInternational.png" alt="Florida International University">
+                        <img src="/index/img/adelphiUniversity.png" alt="Adelphi University">
+                        <img src="/index/img/auburn.png" alt="Auburn University">
+                        <img src="/index/img/barnard.png" alt="Barnard College">
+                        <img src="/index/img/louisianaSU.png" alt="Louisiana State University">
+                        <img src="/index/img/ringlingCollegeOfArt.png" alt="Ringling College of Art and Design">
+                        <img src="/index/img/southFlorida.png" alt="University of South Florida">
+                        <img src="/index/img/tampa.png" alt="University of Tampa">
+                        <img src="/index/img/tennesse.png" alt="University of Tennessee">
+                        <img src="/index/img/louisianaSU.png" alt="Louisiana State University">
+                        <img src="/index/img/auburn.png" alt="Auburn University">
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)" aria-label="Anterior">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)" aria-label="Siguiente">&#10095;</button>
+                </div>
+            </div>
+
+            <script>
+
+                let index = 0;
+                const visibleSlides = 3;
+                const slideStep = 100;
+
+                function moveSlide(step) {
+                    const slides = document.querySelector('.carousel-images');
+                    const totalItems = slides.children.length;
+                    const totalPages = Math.ceil(totalItems / visibleSlides);
+
+                    index = (index + step + totalPages) % totalPages;
+                    slides.style.transform = `translateX(${-index * slideStep}%)`;
+                }
+
+                // Autoplay
+                let autoplay = setInterval(() => {
+                    moveSlide(1); // agora ele sempre usa os dados atualizados
+                }, 3000);
+
+                // Pausar autoplay ao interagir
+                document.querySelectorAll('.prev, .next').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        clearInterval(autoplay);
+                    });
+                });
+            </script>
+        </section>
+
+
+        <div class="afiliados">
+            <h1 class="tituloafiliados">Flex Affiliates</h1>
+
+            <div class="containerafiliados">
+                <div>
+                    <h2 class="numeros"><strong>90</strong></h2>
+                    <p class="formatacao"><strong>Actives Students</strong></p>
+                </div>
+                <div>
+                    <h2 class="numeros"><strong>16</strong></h2>
+                    <p class="formatacao"><strong> Educational Institutions</strong></p>
+                </div>
+                <div>
+                    <h2 class="numeros"><strong>+ de 430</strong></h2>
+                    <p class="formatacao"><strong>Transformed Students</strong></p>
+                </div>
+            </div>
+            <img class="formatacaoimg" src="/sobre-nos/img/mapa.png" alt="">
+        </div>
+
+        <section class="equipe">
+            <h1>Our Team</h1>
+            <div class="container-equipe">
+                <div class="integrante">
+                    <img src="/sobre-nos/img/Daniela.jpeg" alt="Daniela - Fundadora">
+                    <p>Daniela Pieralisi</p>
+                </div>
+                <div class="integrante">
+                    <div class="integrante-meio">
+                        <img src="/sobre-nos/img/Paulo.jpeg" alt="Paulo - Diretor">
+                        <p>Paulo Ricardo Diniz</p>
+                    </div>
+
+                    <div class="integrante-meio">
+                        <img src="/sobre-nos/img/Leticia FM.png" alt="">
+                        <p>Léticia Minto</p>
+                    </div>
+                </div>
+                <div class="integrante">
+                    <img src="/sobre-nos/img/Debora.jpeg" alt="Débora - Sócia">
+                    <p>Débora Vargas</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp - ícone fixo -->
+    <div class="wpp-fixo">
+        <a href="https://api.whatsapp.com/send?phone=14079893636&text=Hello,%20I%20found%20you%20through%20your%20Website"
+            target="_blank" rel="noopener noreferrer">
+            <img src="/album/img/whatsapp (2).png" alt="Fale conosco no WhatsApp" />
+        </a>
+    </div>
+
+    <footer style="padding-top: 0; margin-top: 0;">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="paragrafo1">Localization</p>
+                <ul class="localizacao">
+                    <li>1878 Thetford Rd</li>
+                    <li>Orlando/Fl</li>
+                    <li>32824</li>
+                </ul>
+            </div>
+            <div class="footer-centro">
+                <div class="footer-logo">
+                    <a href="/index.html">
+                        <img src="/footer/img/logo-branca-footer.png" alt="">
+                    </a>
+                </div>
+                <div class="footer-redes-sociais">
+                    <a target="_blank" href="https://www.instagram.com/flexmajorschool/">
+                        <img src="/index/img/instagram.svg" alt="instagram">
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/Flex-Major-School-102353782292788">
+                        <img src="/index/img/facebook.svg" alt="facebook">
+                    </a>
+                    <a target="_blank" style="width: 27px; height: 27px;"
+                        href="hhttps://www.linkedin.com/company/flex-major-school/">
+                        <img src="/index/img/linkedin32.png" alt="linkedin">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-rigth">
+                <p class="footer-email">flex@flexmajorschool.com</p>
+                <ul class="lista-school">
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/middle-school/middle-ing.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            Middle School
+                        </a>
+                    </li>
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/high-school/high-eng.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            High School
+                        </a>
+                    </li>
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/college-prep/college-eng.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            College Prep.
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <div>Flex Major School™ 2025 – All Rights Reserved</div>
+            <div>Developed by <a href="https://www.linkedin.com/in/caio-farinha-904aab25b/">Caio Farinha™</a> & <a
+                    href="">Victor Hugo™</a></div>
+        </div>
+    </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/middle-school/js/high-middle.js"></script>
+
+
+</html>

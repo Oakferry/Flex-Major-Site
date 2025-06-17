@@ -1,0 +1,353 @@
+* {
+    max-width: 100%;
+}
+
+body {
+    padding-top: 38px;
+    /* Um pouco maior que 38px para evitar sobreposição*/
+
+}
+
+
+.container-prinp {
+    background-color: #B41819;
+    padding-top: 120px;
+    padding-bottom: 20px;
+    color: white;
+    text-align: center;
+
+}
+
+.formatacaoprinp {
+    font-size: 80px;
+}
+
+.imgprinp {
+    display: flex;
+    padding: 60px;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.imgprinp img {
+    width: 20%;
+    height: auto;
+    margin: 0 5px;
+}
+
+.container-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5%;
+    background-color: white;
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+.text-content h2 {
+    color: #B41819;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.image-container img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.container-sectionUm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5%;
+    background-color: #B41819;
+
+}
+
+.text-contentUm {
+    max-width: 50%;
+}
+
+.text-contentUm h2 {
+    color: white;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.text-contentUm p {
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.section {
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #d9534f;
+}
+
+.date {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.location {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.items {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.items li {
+    margin-bottom: 5px;
+}
+
+.sectionDois {
+    background-color: #B41819;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.form {
+    color: white;
+}
+
+.dateDois {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.locationDois {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.containerTres {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.titleTres {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #B41819;
+}
+
+.accommodation {
+    display: inline-block;
+    width: 30%;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.accommodation:last-child {
+    margin-right: 0;
+}
+
+.dateTres {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.locationTres {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.imageTres {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.containerQua {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.sectionQua {
+    background-color: white;
+    color: #B41819;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.titleQua {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.itemsQua {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.itemsQua li {
+    margin-bottom: 5px;
+}
+
+.document-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.sectionQui {
+    background-color: #B41819;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.botaowhats {
+    background-color: rgb(23, 180, 23);
+    color: white;
+    display: block;
+    margin: 20px auto;
+    width: fit-content;
+    padding: 15px 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.botaowhats1 {
+    background-color: rgb(23, 180, 23);
+    color: white;
+
+    margin: 20px auto;
+    width: fit-content;
+    padding: 15px 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.botaowhats2 {
+    background-color: red;
+    color: white;
+
+    margin: 20px auto;
+    width: fit-content;
+    padding: 15px 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.botaowhats:hover {
+    background-color: #0f970f;
+}
+
+.containerEx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: #f7f7f7
+    /* ou transparente se quiser seguir o fundo da página */
+}
+
+.formCard {
+    background-color: rgb(255, 255, 255);
+    padding: 40px 30px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    text-align: center;
+}
+
+.formTitle {
+    font-size: 28px;
+    margin-bottom: 24px;
+    font-weight: bold;
+    color:#B41819;
+}
+
+.formInput,
+.formTextarea {
+    width: 95%;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border 0.3s ease;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+    border-color:#2c7cd1;
+    outline: none;
+}
+
+.formTextarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.formButton {
+    width: 100%;
+    background-color: #1961ad;;
+    color: white;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.formButton:hover {
+    background-color: #05366b;
+}

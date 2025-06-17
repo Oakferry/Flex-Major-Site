@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle school</title>
+
+
+
+    <link rel="shortcut icon" href="/index/img/LOGO.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/navbar/css/navbar.css">
+    <link rel="stylesheet" href="/index/css/style.css">
+    <link rel="stylesheet" href="/index/css/style-index-responsive.css">
+
+    <link rel="stylesheet" href="/footer/css/footer.css">
+    <link rel="stylesheet" href="/navbar/css/navbar.css">
+    <link rel="stylesheet" href="/navbar/css/navbar-responsive.css">
+    <link rel="stylesheet" href="/middle-school/css/middle.css">
+    <link rel="stylesheet" href="/middle-school/css/middle-responsive.css">
+    <link rel="stylesheet" href="/high-school/css/high.css">
+
+    <style>
+        .wpp-fixo {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+
+        .wpp-fixo a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .wpp-fixo img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        /* Tooltip acima */
+        .wpp-fixo a::after {
+            content: "Fale conosco";
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 6px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            opacity: 0;
+            white-space: nowrap;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        /* Setinha para baixo (abaixo do balão) */
+        .wpp-fixo a::before {
+            content: "";
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .wpp-fixo a:hover::after,
+        .wpp-fixo a:hover::before {
+            opacity: 1;
+        }
+
+        /* Animação pulsante */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <section class="barraSuperior">
+
+        <!-- Right section -->
+        <div class="rigthSide">
+
+            <!-- Flags -->
+            <div class="bandeiraIdioma">
+                <a href="/high-school/highSchool.html" class="brasil">
+                    <img src="/index/img/brasil (1).png" alt="br">
+                </a>
+                <a href="/high-school/high-eng.html" class="eua">
+                    <img src="/index/img/estados-unidos24.png" alt="en">
+                </a>
+                <a href="/high-school/high-esp.html" class="espanha">
+                    <img src="/index/img/espanha24.png" alt="es">
+                </a>
+            </div>
+
+            <!-- Social media links -->
+            <div class="redeSociais ms-3">
+                <a target="_blank" href="https://www.instagram.com/flexmajorschool/" class="text-white">
+                    <img src="/index/img/instagram.svg" alt="instagram">
+                </a>
+                <a href="https://www.facebook.com/Flex-Major-School-102353782292788" class="text-white ms-1">
+                    <img src="/index/img/facebook.svg" alt="facebook">
+                </a>
+                <a href="https://www.linkedin.com/company/flex-major-school/" class="text-white ms-1">
+                    <img src="/index/img/linkedin32.png" alt="linkedin">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <header class="header2" id="header">
+        <a id="logo" href="/index-port.html">
+            <img src="/index/img/LOGO.svg" alt="">
+        </a>
+        <nav id="nav">
+            <button aria-label="Abrir menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li class="dropdown">
+                    <a class="mexer" href="/">Choose your program
+                        <img src="/index/img/seta-para-baixo.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/middle-school/middle.html">Middle School</a></li>
+                        <li><a href="/high-school/highSchool.html">High School</a></li>
+                        <li><a href="/college-prep/collegeprep.html">College Prep</a></li>
+                    </ul>
+                </li>
+                <li><a href="/sobre-nos/sobre-nos.html">About us</a></li>
+                <li><a href="/album/album.html">Album</a></li>
+                <li><a href="/partnership\partnership-school.html">Become a Partner School</a></li>
+                <li class="link-album-mobile">
+
+                    <!-- Mudar idioma -->
+                    <a href="/high-school/highSchool.html" class="text-white me-3"> <img src="/index/img/brasil (1).png"
+                            alt="br"></a>
+                    <a href="/high-school/high-eng.html" class="text-white"> <img
+                            src="/index/img/estados-unidos24.png" alt="en"></a>
+                    <a href="/high-school/high-esp.html" class="text-white"> <img src="/index/img/espanha24.png"
+                            alt="es"></a>
+                </li>
+                <li class="redeSociais-mobile">
+                    <a target="_blank" href="https://www.instagram.com/flexmajorschool/" class="text-white ">
+                        <img src="/index/img/instagram-mobile.png" alt="instagram">
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/Flex-Major-School-102353782292788"
+                        class="text-white ms-1">
+                        <img src="/index/img/facebook-mobile.png" alt="facebook">
+                    </a>
+                    <a target="_blank" href="hhttps://www.linkedin.com/company/flex-major-school/"
+                        class="text-white ms-1 " style="object-fit: cover;">
+                        <img src="/index/img/linkedin-mobile (1).png" alt="LINKEDIN">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <script src="/navbar/js/script.js">
+
+    </script>
+
+    <!-- Banner -->
+    <section class="banner-middle">
+        <div class="container-middle">
+            <div class="content-middle">
+                <h1>High School Program</h1>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="sobre-middle">
+            <div class="container-sobre">
+                <div class="container-texto">
+                    <h1>High School</h1>
+                    <h2>International High School Education</h2>
+                    <p>
+                        Flex Major's High School program offers students the opportunity to earn an international
+                        diploma. Through a hybrid learning model, students can achieve a Dual Diploma, earning a U.S.
+                        high school diploma while simultaneously completing their Brazilian high school. Part of the
+                        program is carried out with Flex Major School, providing a bilingual and internationally aligned
+                        educational experience.
+                    </p>
+                    <!-- <a class="btn-middle" href="/sobre-nos/sobre-nos.html"><button>Enroll Now!</button></a> -->
+                </div>
+
+                <div class="img-middle">
+                    <img src="/middle-school/img/middle-direita.png" alt="Student smiling while studying">
+                </div>
+            </div>
+        </div>
+
+        <div class="background-red">
+            <h3>Learn more about the program and its <span>Key Highlights</span></h3>
+            <div class="container-topicos">
+                <div class="topicos">
+                    <img src="/middle-school/img/icon-metodologia.png" alt="Personal Guidance Icon">
+                    <p>PERSONAL GUIDANCE</p>
+                </div>
+                <div class="topicos">
+                    <img src="/middle-school/img/icon-acesso.png" alt="24/7 Access Icon">
+                    <div>
+                        <p>24/7 ACCESS</p>
+                    </div>
+                </div>
+                <div class="topicos">
+                    <img src="/middle-school/img/icon-certificado.png" alt="American Certificate Icon">
+                    <p>AMERICAN DIPLOMA</p>
+                </div>
+                <div class="topicos">
+                    <img src="/middle-school/img/icon-metodologia.png" alt="Active Methodology Icon">
+                    <p>ACTIVE METHODOLOGY</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="creditos-modern">
+            <h3>American Curriculum</h3>
+            <h4>To graduate from high school in Florida, students must complete 24 credits — up to 17.5 can be validated
+                from Brazilian subjects, and at least 6.5 must be completed with Flex.</h4>
+            <div class="container-creditos-modern">
+                <div class="img-creditos">
+                    <img src="/middle-school/img/middle-direita.png" alt="Student holding a notebook and smiling">
+                </div>
+
+                <div class="creditos-table-wrapper">
+                    <table class="creditos-tabela-modern">
+                        <thead>
+                            <tr>
+                                <th>Subject Area</th>
+                                <th>Credits</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>English</td>
+                                <td>4.0</td>
+                            </tr>
+                            <tr>
+                                <td>Mathematics</td>
+                                <td>4.0</td>
+                            </tr>
+                            <tr>
+                                <td>Science</td>
+                                <td>3.0</td>
+                            </tr>
+                            <tr>
+                                <td>Social Studies</td>
+                                <td>3.5</td>
+                            </tr>
+                            <tr>
+                                <td>Arts / Theater</td>
+                                <td>1.0</td>
+                            </tr>
+                            <tr>
+                                <td>Physical Education</td>
+                                <td>1.0</td>
+                            </tr>
+                            <tr>
+                                <td>Electives</td>
+                                <td>7.5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Partners Carousel -->
+        <section class="parceiros">
+            <h1>UNIVERSITY PARTNERS</h1>
+
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="/index/img/illinoisChicago.png" alt="University of Illinois at Chicago">
+                        <img src="/index/img/floridaInternational.png" alt="Florida International University">
+                        <img src="/index/img/adelphiUniversity.png" alt="Adelphi University">
+                        <img src="/index/img/auburn.png" alt="Auburn University">
+                        <img src="/index/img/barnard.png" alt="Barnard College">
+                        <img src="/index/img/louisianaSU.png" alt="Louisiana State University">
+                        <img src="/index/img/ringlingCollegeOfArt.png" alt="Ringling College of Art and Design">
+                        <img src="/index/img/southFlorida.png" alt="University of South Florida">
+                        <img src="/index/img/tampa.png" alt="University of Tampa">
+                        <img src="/index/img/tennesse.png" alt="University of Tennessee">
+                        <img src="/index/img/louisianaSU.png" alt="Louisiana State University">
+                        <img src="/index/img/auburn.png" alt="Auburn University">
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)" aria-label="Previous slide">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)" aria-label="Next slide">&#10095;</button>
+                </div>
+
+                <div class="carousel-button-container">
+                    <a href="/" class="carousel-button">See More</a>
+                </div>
+            </div>
+
+            <script>
+
+                let index = 0;
+                const visibleSlides = 3;
+                const slideStep = 100;
+
+                function moveSlide(step) {
+                    const slides = document.querySelector('.carousel-images');
+                    const totalItems = slides.children.length;
+                    const totalPages = Math.ceil(totalItems / visibleSlides);
+
+                    index = (index + step + totalPages) % totalPages;
+                    slides.style.transform = `translateX(${-index * slideStep}%)`;
+                }
+
+                // Autoplay
+                let autoplay = setInterval(() => {
+                    moveSlide(1); // agora ele sempre usa os dados atualizados
+                }, 3000);
+
+                // Pausar autoplay ao interagir
+                document.querySelectorAll('.prev, .next').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        clearInterval(autoplay);
+                    });
+                });
+            </script>
+        </section>
+
+        <div class="beneficios">
+            <div class="container-beneficts">
+                <div class="controle" id="benefits">
+                    <div class="linha-1"></div>
+                    <div class="linha-2"></div>
+                    <div class="linha-3"></div>
+                </div>
+                <div class="controle-content">
+                    <h3>Benefits of being a Flex High School Student</h3>
+
+                    <div class="benefit">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 0v6l3-2 3 2v-6" />
+                        </svg>
+                        <p><b>Dual Diploma</b> – Students only complete the remaining required U.S. credits by using
+                            course equivalencies.</p>
+                    </div>
+
+                    <div class="benefit">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 6v6l4 2" />
+                            <circle cx="12" cy="12" r="10" />
+                        </svg>
+                        <p><b>Flexible Study Pace</b> – Personalized and high-quality study plans.</p>
+                    </div>
+
+                    <div class="benefit">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 8v8m-4-4h8" />
+                            <rect x="2" y="6" width="20" height="12" rx="2" />
+                        </svg>
+                        <p><b>Best Value for Money</b> – Premium quality with affordable investment.</p>
+                    </div>
+
+                    <div class="benefit">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <rect x="2" y="4" width="20" height="14" rx="2" />
+                            <path d="M2 18h20" />
+                        </svg>
+                        <p><b>Award-Winning Digital Platform</b> – Complete, interactive, and user-friendly for an
+                            immersive learning experience.</p>
+                    </div>
+
+                    <div class="benefit">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z" />
+                        </svg>
+                        <p><b>100+ Elective Courses</b> – Students explore a full catalog and expand their knowledge at
+                            no extra cost.</p>
+                    </div>
+
+                    <div class="benefit">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M2.5 19L21 12 2.5 5 4 10l14 2-14 2z" />
+                        </svg>
+                        <p><b>International Academic Exchanges</b> – Global opportunities that enrich student
+                            development.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="quem-pode-conteudo">
+            <div class="quem-pode-texto">
+                <h2 class="titulo-secao">Who can be a Flex High School student?</h2>
+                <ul class="lista-requisitos">
+                    <li>Minimum level of A2+ or equivalent</li>
+                    <li>Proof via Flex Assessment or another international test taken in the past year</li>
+                    <li>Students from the 8th year of elementary school onwards</li>
+                </ul>
+            </div>
+            <img class="imagem-ilustrativa"
+                src="https://programapleno.com.br/wp-content/uploads/2021/10/programaplenoescoladainteligencia_programaplenoescoladainteligencia_image_868.jpeg"
+                alt="Flex Japanese student">
+        </div>
+
+        <section class="impacto-section">
+            <h2 class="titulo-secao">Discover the impact we create:</h2>
+            <div class="carousel-videos">
+
+                <div class="video-card">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/8WhpB7vA83A" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-nome">Guilherme Hiray</h3>
+                        <p class="video-legenda">Former Flex Major student</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/dJN89DRekB4" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-nome">Victoria Poly</h3>
+                        <p class="video-legenda">Former Flex Major student</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/kNdw01gNJQY" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-nome">Sabrina</h3>
+                        <p class="video-legenda">Former Flex Major student</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- WhatsApp - ícone fixo -->
+    <div class="wpp-fixo">
+        <a href="https://api.whatsapp.com/send?phone=14079893636&text=Hello,%20I%20found%20you%20through%20your%20Website"
+            target="_blank" rel="noopener noreferrer">
+            <img src="/album/img/whatsapp (2).png" alt="Fale conosco no WhatsApp" />
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="paragrafo1">Localization</p>
+                <ul class="localizacao">
+                    <li>1878 Thetford Rd</li>
+                    <li>Orlando/FL</li>
+                    <li>32824</li>
+                </ul>
+            </div>
+            <div class="footer-centro">
+                <div class="footer-logo">
+                    <a href="/index.html">
+                        <img src="/footer/img/logo-branca-footer.png" alt="">
+                    </a>
+                </div>
+                <div class="footer-redes-sociais">
+                    <a target="_blank" href="https://www.instagram.com/flexmajorschool/">
+                        <img src="/index/img/instagram.svg" alt="instagram">
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/Flex-Major-School-102353782292788">
+                        <img src="/index/img/facebook.svg" alt="facebook">
+                    </a>
+                    <a target="_blank" style="width: 27px; height: 27px;"
+                        href="hhttps://www.linkedin.com/company/flex-major-school/">
+                        <img src="/index/img/linkedin32.png" alt="linkedin">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-rigth">
+                <p class="footer-email">flex@flexmajorschool.com</p>
+                <ul class="lista-school">
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/middle-school/middle.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            Middle School
+                        </a>
+                    </li>
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/high-school/highSchool.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            High School
+                        </a>
+                    </li>
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/college-prep/collegeprep.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            College Prep.
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <div>Flex Major School™ 2025 – All Rights Reserved</div>
+            <div>Developed by <a href="https://www.linkedin.com/in/caio-farinha-904aab25b/">Caio Farinha™</a> & <a
+                    href="">Victor Hugo™</a></div>
+        </div>
+    </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/middle-school/js/high-middle.js"></script>
+
+</html>

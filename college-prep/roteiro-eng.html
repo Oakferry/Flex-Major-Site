@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itinerary</title>
+
+  <link rel="stylesheet" href="/index/css/style.css">
+  <link rel="stylesheet" href="/index/css/style-index-responsive.css">
+  <link rel="shortcut icon" href="/index/img/LOGO.svg" type="image/x-icon">
+  <link rel="stylesheet" href="/college-prep/css/roteiro.css">
+  <link rel="stylesheet" href="/footer/css/footer.css">
+  <link rel="stylesheet" href="/college-prep/css/roteirorespon.css">
+  <link rel="stylesheet" href="/navbar/css/navbar.css">
+
+  <style>
+    .wpp-fixo {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 30px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: pulse 2s infinite;
+    }
+
+    .wpp-fixo a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .wpp-fixo img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    /* Tooltip acima */
+    .wpp-fixo a::after {
+      content: "Fale conosco";
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: #fff;
+      padding: 6px 10px;
+      font-size: 12px;
+      border-radius: 5px;
+      opacity: 0;
+      white-space: nowrap;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    /* Setinha para baixo (abaixo do balão) */
+    .wpp-fixo a::before {
+      content: "";
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 6px;
+      border-style: solid;
+      border-color: #333 transparent transparent transparent;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .wpp-fixo a:hover::after,
+    .wpp-fixo a:hover::before {
+      opacity: 1;
+    }
+
+    /* Animação pulsante */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+
+      70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+      }
+
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- Top Bar -->
+  <section class="barraSuperior">
+
+    <!-- Right section -->
+    <div class="rigthSide">
+
+      <!-- Flags -->
+      <div class="bandeiraIdioma">
+        <a href="/college-prep/roteiro.html" class="brasil">
+          <img src="/index/img/brasil (1).png" alt="br">
+        </a>
+        <a href="/college-prep/roteiro-eng.html" class="eua">
+          <img src="/index/img/estados-unidos24.png" alt="en">
+        </a>
+        <a href="/college-prep/roteiro-esp.html" class="espanha">
+          <img src="/index/img/espanha24.png" alt="es">
+        </a>
+      </div>
+
+      <!-- Social media links -->
+      <div class="redeSociais ms-3">
+        <a target="_blank" href="https://www.instagram.com/flexmajorschool/" class="text-white">
+          <img src="/index/img/instagram.svg" alt="instagram">
+        </a>
+        <a href="https://www.facebook.com/Flex-Major-School-102353782292788" class="text-white ms-1">
+          <img src="/index/img/facebook.svg" alt="facebook">
+        </a>
+        <a href="https://www.linkedin.com/company/flex-major-school/" class="text-white ms-1">
+          <img src="/index/img/linkedin32.png" alt="linkedin">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <header class="header2" id="header">
+    <a id="logo" href="/index-port.html">
+      <img src="/index/img/LOGO.svg" alt="">
+    </a>
+    <nav id="nav">
+      <button aria-label="Abrir menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+
+        <span id="hamburguer"></span>
+      </button>
+      <ul id="menu" role="menu">
+        <li class="dropdown">
+          <a class="mexer" href="/">Choose your program
+            <img src="/index/img/seta-para-baixo.png" alt="">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="/middle-school/middle.html">Middle School</a></li>
+            <li><a href="/high-school/highSchool.html">High School</a></li>
+            <li><a href="/college-prep/collegeprep.html">College Prep</a></li>
+          </ul>
+        </li>
+        <li><a href="/sobre-nos/sobre-nos.html">About us</a></li>
+        <li><a href="/album/album.html">Album</a></li>
+        <li><a href="/partnership\partnership-school.html">Become a Partner School</a></li>
+        <li class="link-album-mobile">
+
+          <!-- Mudar idioma -->
+          <a href="/college-prep/roteiro.html" class="text-white me-3"> <img src="/index/img/brasil (1).png"
+              alt="br"></a>
+          <a href="/college-prep/roteiro-eng.html" class="text-white"> <img src="/index/img/estados-unidos24.png"
+              alt="en"></a>
+          <a href="/college-prep/roteiro-esp.html" class="text-white"> <img src="/index/img/espanha24.png" alt="es"></a>
+        </li>
+        <li class="redeSociais-mobile">
+          <a target="_blank" href="https://www.instagram.com/flexmajorschool/" class="text-white ">
+            <img src="/index/img/instagram-mobile.png" alt="instagram">
+          </a>
+          <a target="_blank" href="https://www.facebook.com/Flex-Major-School-102353782292788" class="text-white ms-1">
+            <img src="/index/img/facebook-mobile.png" alt="facebook">
+          </a>
+          <a target="_blank" href="hhttps://www.linkedin.com/company/flex-major-school/" class="text-white ms-1 "
+            style="object-fit: cover;">
+            <img src="/index/img/linkedin-mobile (1).png" alt="LINKEDIN">
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+  <script src="/navbar/js/script.js"> </script>
+
+
+  <div class="container-prinp">
+    <h2 class="formatacaoprinp">College prep 2025</h2>
+    <h2>The preparation that transforms your future
+    </h2>
+    <div class="imgprinp">
+      <img src="/college-prep/img/anteriores.jpg" alt="">
+      <img src="/college-prep/img/anteriores3.jpg" alt="">
+      <img src="/college-prep/img/anteriores2.jpg" alt="">
+
+    </div>
+
+  </div>
+  <main>
+
+    <div class="container-section">
+
+      <div class="text-content">
+        <h2 class="texth2">Unique opportunity at Full Sail University
+        </h2>
+        <p>
+          Complete university experience, where you can experience academic life, explore areas of interest and discover
+          new career possibilities. With vocational courses and workshops, direct learning from professors and
+          specialists, in addition to enriching cultural activities, this is your chance to expand your horizons and
+          still
+          receive certification for your future!
+
+        </p>
+
+      </div>
+
+
+      <div class="image-container">
+        <img src="/college-prep/img/collegePrep.png" alt="Student group">
+      </div>
+    </div>
+
+    <div class="container-sectionUm">
+
+      <div class="text-contentUm">
+        <h2 class="texth22">Fun and learning at the best theme parks
+        </h2>
+        <p>
+          An unforgettable opportunity that combines entertainment and discovery! Explore the charm of marine life at
+          SeaWorld, the magic of Disney or the adrenaline of Universal. Exciting roller coasters, spectacular shows and
+          immersive attractions are part of this unique journey, making every moment even more special!
+
+        </p>
+
+      </div>
+
+
+      <div class="image-container">
+        <img src="/college-prep/img/collegepreprote.avif" alt="Student group">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="title">Schedule</div>
+
+      <div class="section">
+        <div class="date">Day 01 - July 17
+          /jun</div>
+        <div class="location">Campinas - Orlando</div>
+        <ul class="items">
+          <li>Campinas – Orlando trip 10:15 am – 6:00 pm
+          </li>
+          <li>Walmart + accommodation
+          </li>
+          <li>Pizza night
+          </li>
+          <li>Game room and rest
+          </li>
+        </ul>
+      </div>
+
+      <div class="sectionDois">
+        <div class="dateDois">Day 02 – July 18
+        </div>
+        <div class="locationDois">UCF and Pool Party
+        </div>
+        <ul class="items">
+          <li class="form">Breakfast at the resort
+          </li>
+          <li class="form">UCF
+          </li>
+          <li class="form">Lunch at UCF
+          </li>
+          <li class="form">Orlando Outlet
+          </li>
+          <li class="form">Barbecue
+          </li>
+          <li class="form">Pool Party
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="date">Day 03 – July 19
+        </div>
+        <div class="location">Campinas - Orlando</div>
+        <ul class="items">
+          <li>Breakfast at the resort
+          </li>
+          <li>NASA
+          </li>
+          <li>Free lunch
+          </li>
+          <li>NASA
+          </li>
+          <li class="form">Snack at home</li>
+        </ul>
+      </div>
+
+      <div class="sectionDois">
+        <div class="dateDois">Day 04 – July 20
+
+        </div>
+        <div class="locationDois">SeaWorld
+
+        </div>
+        <ul class="items">
+          <li class="form">Breakfast at the resort
+          </li>
+          <li class="form">SeaWorld
+          </li>
+          <li class="form">Free lunch
+
+          </li>
+          <li class="form">SeaWorld
+
+          </li>
+          <li class="form">Snack at home
+
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="date">Day 05 – July 21
+
+        </div>
+        <div class="location">Campus Tour and Hard Rock Café
+        </div>
+        <ul class="items">
+          <li>Breakfast at the resort
+
+          </li>
+          <li>Campus Tour
+
+          </li>
+          <li>Check-fil-A
+
+          </li>
+          <li>Creative Economy & Creative Presentations
+
+          </li>
+          <li>Hard Rock Café
+          </li>
+          <li>City Walk</li>
+        </ul>
+      </div>
+
+      <div class="sectionDois">
+        <div class="dateDois">Day 06 – July 22
+
+        </div>
+        <div class="locationDois">Workshops and Disney Springs
+
+        </div>
+        <ul class="items">
+          <li class="form">Breakfast at the resort
+
+          </li>
+          <li class="form">Film & Television
+
+          </li>
+          <li class="form">Taco Bell
+
+          </li>
+          <li class="form">Entertainment Business Workshop & Music Workshop
+
+          </li>
+          <li class="form">Disney Springs
+
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="date">Day 07 – July 23
+
+        </div>
+        <div class="location">Workshops and Shopping Trip
+        </div>
+        <ul class="items">
+          <li>Breakfast at the resort
+          </li>
+          <li>Technology Workshop
+
+          </li>
+          <li>Firehouse Subs
+
+          </li>
+          <li>Art & Design Workshop & Game Design Workshop
+
+          </li>
+          <li>Mall at Milenia
+          </li>
+        </ul>
+      </div>
+
+      <div class="sectionDois">
+        <div class="dateDois">Day 08 – July 24
+        </div>
+        <div class="locationDois">Panel and Shopping Trip
+        </div>
+        <ul class="items">
+          <li class="form">Breakfast at the resort
+          </li>
+          <li class="form">Media
+          </li>
+          <li class="form">Arooga’s
+
+          </li>
+          <li class="form">E-sports & Grad panel preparation
+
+          </li>
+          <li class="form">The Florida Mall
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="date">Day 09 – July 25
+
+        </div>
+        <div class="location">Presentations and Full Sail Ceremony
+        </div>
+        <ul class="items">
+          <li>Breakfast at the resort
+          </li>
+          <li>Grad Panel
+
+          </li>
+          <li>Mellow Mushroom
+
+          </li>
+          <li>Time to finish your presentation & Presentations
+          </li>
+          <li>Snack at home</li>
+          <li>Full Sail + Certification Ceremony
+          </li>
+        </ul>
+      </div>
+
+      <div class="sectionDois">
+        <div class="dateDois">Day 10 – July 26
+
+        </div>
+        <div class="locationDois">Universal or Disney
+
+        </div>
+        <ul class="items">
+          <li class="form">Breakfast at the resort
+          </li>
+          <li class="form">Universal (P2P) or Disney
+
+          </li>
+          <li class="form">Free lunch
+
+          </li>
+          <li class="form">Universal (P2P) or Disney
+
+          </li>
+          <li class="form">Snack at home
+
+          </li>
+          <li class="form">Packing
+
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="date">Day 11 – July 27
+
+        </div>
+        <div class="location">Miami – Campinas
+        </div>
+        <ul class="items">
+          <li>Breakfast at the resort
+          </li>
+          <li>Packing
+
+          </li>
+          <li>Free lunch
+          </li>
+          <li>Miami – Campinas flight 7:30 pm – 4:45 am
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="containerTres">
+      <div class="titleTres">Accommodations</div>
+
+      <div class="accommodation">
+        <div class="dateTres">City - 11 to 11/jun</div>
+        <div class="locationTres">Location</div>
+        <img src="/college-prep/img/hotel.jpg" alt="Image 1" class="imageTres">
+      </div>
+
+      <div class="accommodation">
+        <div class="dateTres">City - 11 to 11/jun</div>
+        <div class="locationTres">Location</div>
+        <img src="/college-prep/img/hotel.jpg" alt="Image 2" class="imageTres">
+      </div>
+
+      <div class="accommodation">
+        <div class="dateTres">City - 11 to 11/jun</div>
+        <div class="locationTres">Location</div>
+        <img src="/college-prep/img/hotel.jpg" alt="Image 3" class="imageTres">
+      </div>
+    </div>
+
+    <div class="containerQua">
+      <div class="sectionQui">
+        <div class="titleQua">Necessary documentation:</div>
+        <div class="document-icon">✏️</div>
+        <ul class="itemsQua">
+          <li>Travel Authorization</li>
+          <li>Valid passport</li>
+          <li>Valid visa</li>
+          <li>XXXXX</li>
+        </ul>
+      </div>
+
+      <div class="sectionQua">
+        <div class="titleQua">Included in the package:</div>
+        <ul class="itemsQua">
+          <li>Vocational immersion course at Full Sail University</li>
+          <li>International certificate of participation
+          </li>
+          <li>Ground transportation within the USA
+          </li>
+          <li>Accommodation
+          </li>
+          <li>Tickets for all recreational activities in the program
+          </li>
+          <li>Flex T-shirts
+          </li>
+          <li>International health insurance
+          </li>
+          <li>Meals (breakfast, lunch and dinner)</li>
+          <li>Visit to SeaWorld park</li>
+          <li>Visit to Disney or Universal
+          </li>
+        </ul>
+      </div>
+
+      <div class="sectionQui">
+        <div class="titleQua">Not included in the package:</div>
+        <ul class="itemsQua">
+          <li>Airfare
+          </li>
+          <li>Expenses for travel authorization, passport and visa
+          </li>
+          <li>Meals during the days of transfers Brazil - United States
+          </li>
+          <li>Other optional personal expenses outside the program</li>
+        </ul>
+      </div>
+      <a class="botaowhats"
+        href="https://api.whatsapp.com/send?phone=14079893636&text=Hello,%20I%20%20found%20you%20through%20your%20Website">Contact
+        via WhatsApp</a>
+    </div>
+
+    <div class="containerEx">
+      <div class="formCard">
+        <h2 class="formTitle">Contact Us</h2>
+        <form>
+          <input type="text" placeholder="Your Name" class="formInput" required />
+          <input type="email" placeholder="Email Address" class="formInput" required />
+          <textarea placeholder="Your Message" class="formTextarea" required></textarea>
+          <button type="submit" class="formButton">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+
+  </main>
+  <!-- WhatsApp - ícone fixo -->
+  <div class="wpp-fixo">
+    <a href="https://api.whatsapp.com/send?phone=14079893636&text=Hello,%20I%20found%20you%20through%20your%20Website"
+      target="_blank" rel="noopener noreferrer">
+      <img src="/album/img/whatsapp (2).png" alt="Fale conosco no WhatsApp" />
+    </a>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p class="paragrafo1">Localization</p>
+        <ul class="localizacao">
+          <li>1878 Thetford Rd</li>
+          <li>Orlando/Fl</li>
+          <li>32824</li>
+        </ul>
+      </div>
+      <div class="footer-centro">
+        <div class="footer-logo">
+          <a href="/index.html">
+            <img src="/footer/img/logo-branca-footer.png" alt="">
+          </a>
+        </div>
+        <div class="footer-redes-sociais">
+          <a target="_blank" href="https://www.instagram.com/flexmajorschool/">
+            <img src="/index/img/instagram.svg" alt="instagram">
+          </a>
+          <a target="_blank" href="https://www.facebook.com/Flex-Major-School-102353782292788">
+            <img src="/index/img/facebook.svg" alt="facebook">
+          </a>
+          <a target="_blank" style="width: 27px; height: 27px;"
+            href="hhttps://www.linkedin.com/company/flex-major-school/">
+            <img src="/index/img/linkedin32.png" alt="linkedin">
+          </a>
+        </div>
+      </div>
+      <div class="footer-rigth">
+        <p class="footer-email">flex@flexmajorschool.com</p>
+        <ul class="lista-school">
+          <li class="lista-topico">
+            <a class="list-rigth" href="/middle-school/middle-ing.html">
+              <img src="/footer/img/pessoa-branca.png" alt="">
+              Middle School
+            </a>
+          </li>
+          <li class="lista-topico">
+            <a class="list-rigth" href="/high-school/high-eng.html">
+              <img src="/footer/img/pessoa-branca.png" alt="">
+              High School
+            </a>
+          </li>
+          <li class="lista-topico">
+            <a class="list-rigth" href="/college-prep/college-eng.html">
+              <img src="/footer/img/pessoa-branca.png" alt="">
+              College Prep.
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="sub-footer">
+      <div>Flex Major School™ 2025 – All Rights Reserved</div>
+      <div>Developed by <a href="https://www.linkedin.com/in/caio-farinha-904aab25b/">Caio Farinha™</a> & <a
+          href="">Victor Hugo™</a></div>
+    </div>
+  </footer>
+</body>

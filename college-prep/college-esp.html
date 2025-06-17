@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Prep</title>
+
+    <link rel="stylesheet" href="/index/css/style.css">
+    <link rel="stylesheet" href="/index/css/style-index-responsive.css">
+    <link rel="shortcut icon" href="/index/img/LOGO.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/college-prep/css/collegeprepcss.css">
+    <link rel="stylesheet" href="/footer/css/footer.css">
+    <link rel="stylesheet" href="/navbar/css/navbar-responsive.css">
+    <link rel="stylesheet" href="/college-prep/css/responsiveprep.css">
+    <link rel="stylesheet" href="/navbar/css/navbar.css">
+
+    <style>
+        .wpp-fixo {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+
+        .wpp-fixo a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .wpp-fixo img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        /* Tooltip acima */
+        .wpp-fixo a::after {
+            content: "Fale conosco";
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 6px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            opacity: 0;
+            white-space: nowrap;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        /* Setinha para baixo (abaixo do balão) */
+        .wpp-fixo a::before {
+            content: "";
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .wpp-fixo a:hover::after,
+        .wpp-fixo a:hover::before {
+            opacity: 1;
+        }
+
+        /* Animação pulsante */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <!-- Top Bar -->
+    <section class="barraSuperior">
+
+        <!-- Right section -->
+        <div class="rigthSide">
+
+            <!-- Flags -->
+            <div class="bandeiraIdioma">
+                <a href="/college-prep/collegeprep.html" class="brasil">
+                    <img src="/index/img/brasil (1).png" alt="br">
+                </a>
+                <a href="/college-prep/college-eng.html" class="eua">
+                    <img src="/index/img/estados-unidos24.png" alt="en">
+                </a>
+                <a href="/college-prep/college-esp.html" class="espanha">
+                    <img src="/index/img/espanha24.png" alt="es">
+                </a>
+            </div>
+
+            <!-- Social media links -->
+            <div class="redeSociais">
+                <a target="_blank" href="https://www.instagram.com/flexmajorschool/" class="text-white">
+                    <img src="/index/img/instagram.svg" alt="instagram">
+                </a>
+                <a target="_blank" href="https://www.facebook.com/Flex-Major-School-102353782292788" class="text-white ms-1">
+                    <img src="/index/img/facebook.svg" alt="facebook">
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/company/flex-major-school/" class="text-white ms-1">
+                    <img src="/index/img/linkedin32.png" alt="linkedin">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <header class="header2" id="header">
+        <a id="logo" href="/index-spanish.html">
+            <img src="/index/img/LOGO.svg" alt="">
+        </a>
+        <nav id="nav">
+            <button aria-label="Abrir menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li class="dropdown">
+                    <a class="mexer" href="/">Elige tu programa
+                        <img src="/index/img/seta-para-baixo.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/middle-school/middle-esp.html">Middle School</a></li>
+                        <li><a href="/high-school/high-esp.html">High School</a></li>
+                        <li><a href="/college-prep/college-esp.html">College Prep</a></li>
+                    </ul>
+                </li>
+                <li><a href="/sobre-nos/sobre-esp.html">Sobre nosotros</a></li>
+                <li><a href="/album/album-spanish.html">Álbum</a></li>
+                <li><a href="/partnership\partnership-spanish.html">Hazte una escuela asociada</a></li>
+                <li class="link-album-mobile">
+
+                    <!-- Mudar idioma -->
+                    <a href="/index-port.html" class="text-white me-3"> <img src="/index/img/brasil (1).png" alt="br"></a>
+                    <a href="/index.html" class="text-white"> <img src="/index/img/estados-unidos24.png"
+                            alt="en"></a>
+                    <a href="/index-spanish.html" class="text-white"> <img src="/index/img/espanha24.png" alt="es"></a>
+                </li>
+                <li class="redeSociais-mobile">
+                    <a target="_blank" href="https://www.instagram.com/flexmajorschool/" class="text-white ">
+                        <img src="/index/img/instagram-mobile.png" alt="instagram">
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/Flex-Major-School-102353782292788" class="text-white ms-1">
+                        <img src="/index/img/facebook-mobile.png" alt="facebook">
+                    </a>
+                    <a target="_blank" href="hhttps://www.linkedin.com/company/flex-major-school/" class="text-white ms-1 "
+                        style="object-fit: cover;">
+                        <img src="/index/img/linkedin-mobile (1).png" alt="LINKEDIN">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <script src="/navbar/js/script.js">
+
+    </script>
+
+    <!-- Banner -->
+    <section class="banner-college">
+        <div class="container-college">
+            <div class="content-college">
+                <h1>College Prep.</h1>
+                <!-- <p class="p-answer"></p> -->
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="sobre-college">
+            <div class="container-sobre">
+                <div class="container-texto">
+                    <h1>¿Qué es el programa?</h1>
+                    <h2>Entiende el programa</h2>
+                    <p>College Prep es un programa de intercambio de corta duración de Flex Major School que ofrece una
+                        inmersión académica y vocacional sin comprometer el año escolar. Con apoyo completo desde la
+                        planificación hasta el regreso, proporciona una experiencia única en universidades reconocidas,
+                        permitiendo a los estudiantes explorar su vocación y desarrollar habilidades para el futuro.
+                        Además de mejorar la fluidez en inglés y la comunicación intercultural, el programa enriquece la
+                        trayectoria profesional con certificación internacional y experiencias prácticas. Todo esto bajo la
+                        supervisión y fiabilidad de Flex Major School, asegurando un viaje transformador lleno de oportunidades.<br>
+                    </p>
+                    <a class="btn-college" href="/sobre-nos/sobre-esp.html"><button>Inscríbete ahora!!</button></a>
+                </div>
+
+                <div class="img-college">
+                    <img src="/college-prep/img/college-ban.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- imerssion -->
+        <section class="banner-imerssion">
+            <div class="container-imerssion">
+                <div class="card-imerssion">
+                    <h1 class="collegeprep-title">COLLEGE PREP 2025</h1>
+                    <p class="collegeprep-sub">Inmersión vocacional para estudiantes de 13 a 17 años</p>
+
+                    <div class="collegeprep-links">
+                        <a href="/college-prep/roteiro-esp.html" class="btn-modern">📅 Itinerario</a>
+                        <a href="/college-prep/roteiro-esp.html" class="btn-modern outline">ℹ️ Más información</a>
+                    </div>
+
+                    <p class="descricao-imerssion">
+                        Participa en un programa de intercambio de corta duración transformador en la <strong>Full Sail
+                            University</strong>, en Orlando, Florida, del <strong>17 al 27 de julio de 2025</strong>.
+                        <br><br>
+                        Diseñado para estudiantes de 13 a 17 años, esta experiencia combina aprendizaje académico, exploración vocacional
+                        e intercambio cultural. Disfruta de talleres prácticos, sesiones dirigidas por expertos y visitas a los
+                        principales parques temáticos como Disney y Universal.
+                        <br><br>
+                        Los requisitos de ingreso incluyen inglés nivel A2, pasaporte válido, visa y autorización para viajar. Servicios
+                        opcionales disponibles para asistencia en el viaje.
+                    </p>
+                    
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <div class="photos-from">
+            <h2 class="tituloed">Revive las experiencias de ediciones anteriores</h2>
+            <h2 class="subed">Tu historia puede ser la próxima</h2>
+            <div class="boxing">
+                <img src="/college-prep/img/colleprepPrep1img.jpg" alt="">
+                <img src="/college-prep/img/collegprep3img.jpg" alt="">
+                <img src="/college-prep/img/collegeprep2img.jpg" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <!-- WhatsApp - ícone fixo -->
+    <div class="wpp-fixo">
+        <a href="https://api.whatsapp.com/send?phone=14079893636&text=Olá,%20I%20Vim%20do%20site%20da%20Major"
+            target="_blank" rel="noopener noreferrer">
+            <img src="/album/img/whatsapp (2).png" alt="Fale conosco no WhatsApp" />
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="paragrafo1">Ubicación</p>
+                <ul class="localizacao">
+                    <li>1878 Thetford Rd</li>
+                    <li>Orlando/Fl</li>
+                    <li>32824</li>
+                </ul>
+            </div>
+            <div class="footer-centro">
+                <div class="footer-logo">
+                    <a href="/index.html">
+                        <img src="/footer/img/logo-branca-footer.png" alt="">
+                    </a>
+                </div>
+                <div class="footer-redes-sociais">
+                    <a target="_blank" href="https://www.instagram.com/flexmajorschool/">
+                        <img src="/index/img/instagram.svg" alt="instagram">
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/Flex-Major-School-102353782292788">
+                        <img src="/index/img/facebook.svg" alt="facebook">
+                    </a>
+                    <a target="_blank" style="width: 27px; height: 27px;"
+                        href="hhttps://www.linkedin.com/company/flex-major-school/">
+                        <img src="/index/img/linkedin32.png" alt="linkedin">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-rigth">
+                <p class="footer-email">flex@flexmajorschool.com</p>
+                <ul class="lista-school">
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/middle-school/middle.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            Middle School
+                        </a>
+                    </li>
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/high-school/highSchool.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            High School
+                        </a>
+                    </li>
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/college-prep/collegeprep.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            College Prep.
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <div>Flex Major School™ 2025 – All Rights Reserved</div>
+            <div>Developed by <a href="https://www.linkedin.com/in/caio-farinha-904aab25b/">Caio Farinha™</a> & <a
+                    href="">Victor Hugo™</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
+

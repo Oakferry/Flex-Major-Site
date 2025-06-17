@@ -1,0 +1,52 @@
+body{
+    background-color: #B41819;
+}
+.eletivas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding-top: 160px; 
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.eletivas-title {
+    font-size: 70px;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center; 
+}
+
+.eletivas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; 
+}
+
+.eletivas-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.eletivas-card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.eletivas-card .descricao {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 768px) {
+    .eletivas-grid {
+        grid-template-columns: 1fr; 
+    }
+}

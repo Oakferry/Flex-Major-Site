@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partenership School</title>
+
+
+
+    <link rel="stylesheet" href="/index/css/style-index-responsive.css">
+    <link rel="stylesheet" href="/index/css/style.css">
+    <link rel="stylesheet" href="/footer/css/footer.css">
+    <link rel="stylesheet" href="/navbar/css/navbar.css">
+    <link rel="stylesheet" href="/partnership/css/partnership-school.css">
+    <link rel="stylesheet" href="/partnership/css/responsive-partnership-school.css">
+    <link rel="shortcut icon" href="/index/img/LOGO.svg" type="image/x-icon">
+
+
+
+    <!-- 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     -->
+
+
+     <style>
+        .wpp-fixo {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+
+        .wpp-fixo a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .wpp-fixo img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        /* Tooltip acima */
+        .wpp-fixo a::after {
+            content: "Fale conosco";
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 6px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            opacity: 0;
+            white-space: nowrap;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        /* Setinha para baixo (abaixo do balão) */
+        .wpp-fixo a::before {
+            content: "";
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .wpp-fixo a:hover::after,
+        .wpp-fixo a:hover::before {
+            opacity: 1;
+        }
+
+        /* Animação pulsante */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Nav-bar principal -->
+    <section class="barraSuperior">
+
+        <!-- rigth section -->
+        <div class=" rigthSide">
+
+            <!-- Flags -->
+            <div class="bandeiraIdioma me-1">
+                <a href="/index-port.html" class="brasil">
+                    <img src="/index/img/brasil (1).png" alt="br">
+                </a>
+                <a href="/index.html" class="eua">
+                    <img src="/index/img/estados-unidos24.png" alt="en">
+                </a>
+                <a href="#" class="espanha">
+                    <img src="/index/img/espanha24.png" alt="es">
+                </a>
+            </div>
+
+            <!-- socia midia links -->
+            <div class="redeSociais ms-3">
+                <a target="_blank" href="https://www.instagram.com/flexmajorschool/" class="text-white ">
+                    <img src="/index/img/instagram.svg" alt="instagram">
+                </a>
+                <a href="https://www.facebook.com/Flex-Major-School-102353782292788" class="text-white ms-1">
+                    <img src="/index/img/facebook.svg" alt="facebook">
+                </a>
+                <a href="hhttps://www.linkedin.com/company/flex-major-school/" class="text-white ms-1">
+                    <img src="/index/img/linkedin32.png" alt="linkedin">
+                </a>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <header class="header2" id="header">
+        <a id="logo" href="/index.html">
+            <img src="/index/img/LOGO.svg" alt="">
+        </a>
+        <nav id="nav">
+            <button aria-label="Abrir menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li class="dropdown">
+                    <a class="mexer" href="/">Choose your program
+                        <img src="/index/img/seta-para-baixo.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a target="_blank" href="/middle-school/middle-ing.html">Middle School</a></li>
+                        <li><a target="_blank" href="/high-school/high-eng.html">High School</a></li>
+                        <li><a target="_blank" href="/college-prep/college-eng.html-ing">College Prep</a></li>
+                    </ul>
+                </li>
+                <li><a href="/sobre-nos/sobre-eng.html">About Us</a></li>
+                <li><a href="/album/album-english.html">Album</a></li>
+                <li><a href="/partnership/partnership-school-english.html">Become a Partner School</a></li>
+                <li class="link-album-mobile">
+
+                    <!-- Mudar idioma -->
+                    <a href="/index-port.html" class="text-white me-3"> <img src="index/img/brasil (1).png"
+                            alt="br"></a>
+                    <a href="/index.html" class="text-white"> <img src="index/img/estados-unidos24.png" alt="en"></a>
+                    <a href="#" class="text-white"> <img src="/index/espanha24.png" alt="es"></a>
+                </li>
+                <li class="redeSociais-mobile">
+                    <a target="_blank" href="https://www.instagram.com/flexmajorschool/" class="text-white ">
+                        <img src="/index/img/instagram-mobile.png" alt="instagram">
+                    </a>
+                    <a href="https://www.facebook.com/Flex-Major-School-102353782292788" class="text-white ms-1">
+                        <img src="index/img/facebook-mobile.png" alt="facebook">
+                    </a>
+                    <a href="hhttps://www.linkedin.com/company/flex-major-school/" class="text-white ms-1 "
+                        style="object-fit: cover;">
+                        <img src="/index/img/linkedin-mobile (1).png " alt="youtube">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <!-- Casinha para voltar para o menu e indicar onde se está -->
+
+    <div class="div-local">
+        <a href="/index.html"><img src="/album/img/casa (1).png" alt=""> <span>></span> Partnership School</a>
+    </div>
+
+    <div class="container-parceiro">
+        <div class="content">
+            <h2>Internationalize Your School and Career with Flex!</h2>
+            <p>
+                Take your school and your students to the next level! With Flex, educational institutions can offer a
+                globally recognized curriculum, expanding academic and professional opportunities. And for individual
+                students, our program provides direct access to a global education, preparing them for universities and
+                careers abroad. Whether as a school or a student, connect to a world of possibilities with Flex!
+            </p>
+            <img src="/partnership/img/menino.png" alt="Criança sorrindo">
+
+        </div>
+
+        <div class="form-container">
+            <form>
+                <h3>Become a Flex School</h3>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="tel" placeholder="Phone Number">
+                <input type="text" placeholder="City">
+                <label class="letrasMenores">
+                    <input type="checkbox">I authorize the receipt of other communications from Flex Major.
+                    <p>By clicking "Submit," you authorize Flex Major to store and process your personal information to
+                        provide the requested content.
+                    </p>
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Tabela comparativa -->
+    <section class="section-comparativo">
+        <table>
+            <thead>
+                <tr>
+                    <th>Benefits</th>
+                    <th style="color: #b61919; font-size: larger;">Flex <span style="color: #152a88">Major</span></th>
+                    <th>Other Online Schools</th>
+                    <th>Traditional Schools</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: justify;"><strong>100% Focused on International Students –</strong>
+                        Curriculum adapted for students around the world to earn their <strong>American
+                            Diploma.</strong>.
+                    </td>
+                    <td class="check">✔</td>
+                    <td class="cross">❌</td>
+                    <td class="cross">❌</td>
+                </tr>
+                <tr>
+                    <td style="text-align: justify;"><strong>Dual Diploma</strong> – Taking advantage of curriculum
+                        equivalencies, the student only completes the remaining required U.S. credits.
+                    </td>
+                    <td class="check">✔</td>
+                    <td class="cross">❌</td>
+                    <td class="cross">❌</td>
+                </tr>
+                <tr>
+                    <td style="text-align: justify;"><strong>Flexible Study Pace</strong> – Individualized and
+                        high-quality study schedule.
+                    </td>
+                    <td class="check">✔</td>
+                    <td class="cross">⚠️</td>
+                    <td class="cross">❌</td>
+                </tr>
+                <tr>
+                    <td style="text-align: justify;"><strong>Best Value for Money</strong> – Premium quality with an
+                        affordable investment.
+                    </td>
+                    <td class="check">✔</td>
+                    <td class="cross">⚠️</td>
+                    <td class="cross">❌</td>
+                </tr>
+                <tr>
+                    <td style="text-align: justify;"><strong>Dynamic and Award-Winning Platform</strong> – Complete,
+                        interactive, and easy to use for an engaging learning experience.
+                    </td>
+                    <td class="check">✔</td>
+                    <td class="cross">⚠️</td>
+                    <td class="cross">❌</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- MAPA -->
+    <div class="mapa">
+        <h1 class="global-h1">Flex Major is global</h1>
+        <img class="img-banner" src="/index/img/mapa.jpg" alt="mapa onde a flex major school temos a localizada">
+    </div>
+
+    <div class="container2">
+        <div class="quote-section">
+            <div class="quote-icon">&#8220;</div>
+            <p class="quote">"At the very first moment of the meeting, I was also enchanted — after all, the English
+                language is extremely important nowadays, and so we implemented Flex in our school. We chose it for the
+                seriousness involved and the excellence of the work that was presented to us."</p>
+            <p class="quote-author">– Adriana, Pedagogical Director – Coopel</p>
+            <div class="quote-icon" style="text-align: right;">&#8221;</div>
+        </div>
+        <div class="form-section2">
+            <div class="background-image2">
+                <img src="/partnership/img/fotoDoForms.png" alt="">
+            </div>
+            <div class="form-container2">
+                <h2>Become a Flex Major Partner</h2>
+                <form>
+                    <h3>Become a Flex School</h3>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="tel" placeholder="Phone Number">
+                    <input type="text" placeholder="City">
+                    <label class="letrasMenores">
+                        <input type="checkbox">I authorize the receipt of other communications from Flex Major.
+
+                        <p>By clicking "Submit," you authorize Flex Major to store and process your personal information
+                            to provide the requested content.</p>
+                    </label>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Vídeo Institucional -->
+    <section class="video-institucional">
+        <div class="new">
+            <div class="look">
+                <h1>Learn more about Flex Major</h1>
+                <p>Watch the video and discover how we are transforming the future through international education.</p>
+            </div>
+            <div>
+                <iframe src="https://www.youtube.com/embed/0GkojeJlHdo?si=2oq6oSjja4UzY2b2" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-importantes">
+        <div class="info-container">
+            <div class="info-h2">
+                <h2>Flex Major is a reference and leader in international education, connecting students and schools to
+                    globally recognized quality learning.</h2>
+            </div>
+            <div class="info-container-column">
+                <div class="info-column">
+                    <div class="separar">
+                        <span>10</span>
+                        <p>Brazilian states</p>
+                    </div>
+                    <div class="separar">
+                        <span>108</span>
+                        <p>Partner universities in the United States and around the world</p>
+                    </div>
+                </div>
+                <div class="info-column">
+                    <div class="separar">
+                        <span>10</span>
+                        <p>Students in international universities </p>
+                    </div>
+                    <div class="separar">
+                        <span>10</span>
+                        <p>Years of experience in the market</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <br>
+
+    <div class="wpp-fixo">
+        <a
+            href="https://api.whatsapp.com/send?phone=14079893636&text=Hello,%20I%20%20found%20you%20through%20your%20Website"><img
+                src="/album/img/whatsapp (2).png" alt="Fale conosco - wpp"></a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="paragrafo1">Location</p>
+                <ul class="localizacao">
+                    <li>1878 Thetford Rd</li>
+                    <li>Orlando/Fl</li>
+                    <li>32824</li>
+                </ul>
+            </div>
+            <div class="footer-centro">
+                <div class="footer-logo">
+                    <a href="/index.html">
+                        <img src="/footer/img/logo-branca-footer.png" alt="">
+                    </a>
+                </div>
+                <div class="footer-redes-sociais">
+                    <a target="_blank" href="https://www.instagram.com/flexmajorschool/">
+                        <img src="/index/img/instagram.svg" alt="instagram">
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/Flex-Major-School-102353782292788">
+                        <img src="/index/img/facebook.svg" alt="facebook">
+                    </a>
+                    <a target="_blank" style="width: 27px; height: 27px;"
+                        href="hhttps://www.linkedin.com/company/flex-major-school/">
+                        <img src="/index/img/linkedin32.png" alt="linkedin">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-rigth">
+                <p class="footer-email">email@gmail.com</p>
+                <ul class="lista-school">
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/middle-school/middle-ing.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            Middle School
+                        </a>
+                    </li>
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/high-school/high-eng.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            High School
+                        </a>
+                    </li>
+                    <li class="lista-topico">
+                        <a class="list-rigth" href="/college-prep/college-eng.html">
+                            <img src="/footer/img/pessoa-branca.png" alt="">
+                            College Prep.
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <div>Flex Major School™ 2025 – All Rights Reserved</div>
+            <div>Developed by <a href="https://www.linkedin.com/in/caio-farinha-904aab25b/">Caio Farinha™</a> & <a
+                    href="">Victor Hugo™</a></div>
+        </div>
+
+
+
+
+
+    </footer>
+
+    <script src="/navbar/js/script.js"></script>
+</body>
+
+</html>

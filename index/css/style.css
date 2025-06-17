@@ -1,0 +1,768 @@
+*{
+    max-width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}    
+
+body, ul{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+}
+
+#logo{
+    min-width: 200px;
+    min-height: 50px;
+    
+}
+a{
+    color: rgb(109, 108, 108);
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+#nav a:hover{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+
+/* Banner */
+/* .banner .div-banner-img{
+    padding-top: 100px;
+    max-width: 100%;
+    max-height: 800px;
+    background-image: cover;
+    background-size: cover;
+    object-fit: cover;
+} */
+
+
+.banner .div-banner-img{
+    padding-top: 100px;
+    max-width: 100%;
+    max-height: 800px;
+    background-image: cover;
+    background-size: cover;
+    object-fit: cover;
+}
+
+video{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: static;
+    left: 0;
+    top: 105px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* .banner {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .banner .div-banner-img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  } */
+
+.label-banner {
+    position: absolute;
+    top: 55%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.788);
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid rgb(140, 138, 235);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 420px;
+    z-index: 2;
+    
+}
+
+/* Estilos do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Inputs lado a lado */
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input,
+.input-group select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Botão de envio */
+.btn-label {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #c00;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-label:hover {
+    background: #900;
+}
+
+
+.section-about {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    background-color: #ffffff;
+    position: relative;
+}
+.about-us {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+    left: 2%;
+    margin-right: 30px;
+    padding: 0px 0px;
+}
+.about-us h1 {
+    color: #B41819;
+    font-size: 34px;
+    font-weight: bold;
+}
+.about-us h2 {
+    font-size: 22px;
+    margin-top: 5px;
+    color: #1A629C;
+}
+.about-us p {
+    font-size: 18px;
+    line-height: 1.6; /* Espaçamento entre as linhas */
+    padding: 10px 0px 50px 0;
+    text-align: justify;
+}
+.linha-container {
+    width: 960px;
+    position: absolute; /* O elemento é removido do fluxo normal do documento  */
+    bottom: 131px;
+    left: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #B41819;
+    padding: 15px 40px;
+    height: 30px;
+    border-radius: 5px;
+    
+    /* margin:0px 0px 0px 0px; */
+}
+.btn-saiba-mais {
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+
+}
+.btn-saiba-mais button{
+    background-color:#B41819;
+    /* background-color: #0056b3; */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 0;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+}
+.btn-saiba-mais button:hover {
+    background-color: #1b4f8a;
+    padding: 10px 18px;
+    transition: 0.3s;
+    color: #fff;
+}
+.img-container {
+    /* height: auto; */
+/*     border: 3px solid #B41819;
+    padding: 5px;
+    border-radius: 8px; */
+    position: relative;
+    z-index: 2;
+    object-fit: cover;
+}
+.img-sobre {
+    width: 500px;
+    height: 700px;
+    display: block;
+   
+}
+
+
+
+
+
+/* ---------------------------------------- */
+/* Por que escolher a Flex Major?  */
+/* ---------------------------------------- */
+
+
+/* Css flex-box */
+body .section-diferenciais{
+    padding: 0px 80px 80px 80px;
+}
+
+.section-diferenciais h1{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    font-size: 34px;
+    color: #B41819;
+    text-align: center;
+    font-weight: bold;
+
+}
+.section-diferenciais h2{
+    display: flex;
+    justify-content: center;
+    padding: 0 0 60px 0;
+    color: #003d82;
+    text-align: center;
+}
+
+.flex-diferenciais h3{
+    display: flex;
+    justify-content: center;
+    font-size: medium;
+}
+
+.flex-diferenciais .img-diferenciais{
+    max-width: 100%;
+    display: block;
+    width: 64px;
+    height: 64px;
+    background-color: #003d82;
+    border-radius: 70px;
+    margin: auto;
+    z-index: 1;
+    object-fit: cover;
+}
+.flex-diferenciais .img-diferenciais img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    display: relative;
+    z-index: 2;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    
+}
+
+
+.flex-diferenciais div p{
+    text-align: center;
+}
+
+.flex-diferenciais{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: center;
+}
+.flex-diferenciais div{
+    max-width: 350px;
+    padding: 15px 15px;
+}
+
+.flex-diferenciais > div{
+    flex: 1 1 400px;
+
+}
+
+/* ---------------------------------------- */
+/* TABELA COMPARAÇÃO */
+/* ---------------------------------------- */
+
+body .section-comparativo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+    background-color: #f9f9f9;
+}
+
+table {
+    width: 85%;
+    border-collapse: collapse;
+    background: white;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #f4f4f4;
+}
+
+.comparativo-col-xl{
+    width: 300px;
+}
+
+.check {
+    color: green;
+    font-size: 1.5em;
+}
+.cross {
+    color: blue;
+    font-size: 1.5em;
+}
+
+
+/* ---------------------------------------- */
+/* ESCOLHA SEU PROGRAMA */
+/* ---------------------------------------- */
+
+body .section-choice{
+    text-align: center;
+    padding: 20px 0 50px 0;
+/*     background-color:color-mix(in srgb, rgb(180, 24, 25) 20%, rgb(243, 243, 243) 80%); */
+    background: linear-gradient(rgb(255, 254, 254),rgb(252, 215, 215) );
+
+ 
+}
+
+body .section-choice .color-text{
+    color: rgb(180, 24, 25);
+}
+
+.section-choice h1{
+    padding-bottom: 120px;
+    font-weight: bold;
+}
+
+.section-choice .flex-choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+.choice-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    padding-bottom: 20px;
+}
+
+
+
+.choice-item .circle{
+    width: 90px;
+    height: 90px;
+    background-color: #B41819;
+    border-radius: 50%;
+    position: absolute;
+    top: -70px; /* Posiciona acima da caixa */
+    z-index: 2;
+    
+}
+
+.circle img{
+    max-width: 100%;
+    position: relative;
+    z-index: 3;
+    object-fit: cover;
+    top: 11px;
+}
+
+.choice-item h3{
+    width: 170px;
+}
+
+.flex-choice .box-choice{
+    max-width: 100%;
+    text-align: center;
+    background-color: #eeeeee;
+    padding: 20px 25px 60px 25px;
+    z-index: 0;
+    position: relative;
+    top: -10px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+    border-radius: 8px;
+    justify-content: center;
+    
+}
+
+
+.box-choice ul {
+    padding: 0;
+}
+
+.flex-choice .box-choice li{
+    align-items: center;
+    text-align: start;
+    list-style: none;
+    width: 100%;
+    font-size:12px;
+}
+
+.box-choice .button{
+    position: relative;
+    top: 30px;
+    background-color: #0056b3;
+    border: none;
+    padding: 8px 16px;
+    font-size: 12px;
+    border-radius: 7px;
+    cursor: pointer;
+    }
+
+.box-choice .button a{
+    color: #fffefe;
+    font-size: 14px;
+}
+
+.section-choice .button:hover {
+    background-color: #0036b3;
+}
+
+.box-choice ul{
+    margin-left: 20px;
+}
+
+.hei{
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.oi{
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+}
+
+/* .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+  /*   background-color: #a00; */ /* Fundo vermelho */
+  /*   padding: 10px; */
+   /*  max-width: 800px; */ /* Ajuste conforme necessário */
+   /*  margin: auto;
+} */
+
+/* .carousel-wrapper {
+    overflow: hidden;
+    width: 500px;  *//* Defina um tamanho fixo para exibição */
+/* }
+
+.carousel {
+    display: flex;
+    gap: 15px; */ /* Espaçamento entre imagens */
+    /* transition: transform 0.3s ease-in-out;
+}
+
+.carousel img {
+    width: 100px; */ /* Ajuste o tamanho da logo */
+   /*  height: auto;
+    flex-shrink: 0; */ /* Impede que as imagens diminuam */
+    /* object-fit: cover;
+} */
+
+
+/* Carroussel */
+
+.carousel {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 60px;
+    margin-bottom: 15px;
+  }
+
+  .carousel-images {
+    display: flex;
+    width: calc(100% * 10 / 3); /* 10 imagens, 3 visíveis */
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel img {
+    width: 33.33%;
+    flex-shrink: 0;
+    border-radius: 10px;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    font-size: 2rem;
+  }
+
+  .prev {
+    left: -11px;
+  }
+
+  .next {
+    right: -11px;
+  }
+
+  .carousel-button-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+  }
+
+  .carousel-button {
+    background-color: #B41819;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .carousel-button:hover {
+    background-color: #a00c0c;
+  }
+button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* ---------------------------------------- */
+/* MAPA */
+/* ---------------------------------------- */
+
+.mapa{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.mapa img{
+    width: 850px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 8px rgba(0, 81, 255, 0.2);;
+}
+
+/* ---------------------------------------- */
+/* FAQ */
+/* ---------------------------------------- */
+
+.section-faq{
+    padding: 40px;
+    
+}
+
+.container-title{
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin-left: 125px;
+}
+
+.faq-title{
+    color: #B41819;
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 0;
+    margin-bottom: 0; 
+}
+
+.faq-subtitle{
+    color: #003d82;
+    font-size: 18px;
+    margin-bottom: 35px;    
+}
+
+.faq-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 860px;
+    margin: auto;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    color: #003d82;
+    border-radius: 8px;
+    font-size:medium;
+}
+
+.faq-toggle {
+    color:#B41819;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    border-radius: 8px;
+    max-width: 850px;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
+    font-size: medium;
+}
+
+/* Exibir resposta quando o botão for clicado */
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* -------------------------------------------------------- */
+/* COMECE AGORA */
+/* -------------------------------------------------------- */
+
+.section-comece{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}   
+.container-comece{
+    max-width: 94%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap
+}
+.container-comece img{
+    width: 480px;
+    height: auto;
+    display: flex;
+    text-align: right;
+    padding-right: 150px;
+    object-fit: cover;
+}
+
+.div-container-txt{
+    width: 550px;
+    padding-top: 0;
+}
+
+.div-container-txt h1{
+    display: flex;
+    justify-content: flex-start;
+    color: #B41819;
+    width: 550px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.div-container-txt h2{
+    display: flex;
+    justify-content: flex-start;
+    color: #003d82;
+    font-size: 18px;
+}
+
+.div-container-txt p{ 
+    display: flex;
+    justify-content: flex-end;
+    text-align:justify;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 10px 0px 0px 0;
+}
+.div-container-txt button{ 
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin-top: 20px;
+    margin-left: 200px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.div-container-txt button a{
+    color: white;
+    font-size: 14px;
+
+}
+
+
+/* Fazer a label para o BANNER 1 */
