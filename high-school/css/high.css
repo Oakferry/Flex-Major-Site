@@ -210,3 +210,15 @@
         padding: 0px;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1160px) {
+    
+
+    .img-creditos img {
+        width: 100vw !important; 
+        height: 50vh !important;
+    }
+
+    
+
+}

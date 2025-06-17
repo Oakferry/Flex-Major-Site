@@ -232,7 +232,8 @@ main {
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-    display: none;  /* Apagar essa linha de código quando lançar o College Prep. 2026 */
+    display: none;
+    /* Apagar essa linha de código quando lançar o College Prep. 2026 */
 }
 
 .btn-modern:hover {
@@ -243,7 +244,8 @@ main {
     background: transparent;
     border: 2px solid white;
     color: white;
-    display: none;  /* Apagar essa linha de código quando lançar o College Prep. 2026 */
+    display: none;
+    /* Apagar essa linha de código quando lançar o College Prep. 2026 */
 }
 
 .btn-modern.outline:hover {
@@ -288,7 +290,7 @@ main {
     font-size: 1rem;
     border: none;
     border-radius: 8px;
-    background:#09b317;
+    background: #09b317;
     color: #ffffff;
     font-weight: 600;
     text-decoration: none;

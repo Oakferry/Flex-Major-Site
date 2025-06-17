@@ -1,11 +1,12 @@
 /* Footer geral */
 footer {
     margin-top: 20px;
+    background-color: #172c5e;
 }
 
 /* Footer controlador de posição */
 .footer-container {
-    background-color: #172c5e;
+    padding: 2px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,7 +93,7 @@ footer {
     height: 50px;
     box-sizing: border-box;
     object-fit: cover;
-    padding: 5px 20px 5px 20px;
+    padding: 5px 20px;
 }
 
 .sub-footer div>a {

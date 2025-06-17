@@ -302,7 +302,7 @@ main {
 }
 
 .creditos-tabela-modern {
-    border-collapse: separate;
+    /* border-collapse: separate; */
     border-spacing: 0;
     width: 55vw;
     background-color: #ffffff;

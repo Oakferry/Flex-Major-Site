@@ -69,24 +69,28 @@
     }
 
     .container-creditos-modern {
-        gap: 3.5rem;
+        gap: 1.5rem;
+        flex-direction: column;
+        width: 85%;
     }
 
 
     .creditos-table-wrapper {
         flex: 1;
-        max-width: 95vw;
+        max-width: 100%;
     }
 
     .creditos-tabela-modern {
         width: 100vw;
+   
     }
+    
 
 
     .controle {
         flex-direction: row;
         gap: 15px;
-        padding-right: 0;
+        padding-right: 0px;
         margin-bottom: 0px;
     }
 
@@ -146,5 +150,33 @@
         background: #fff;
         text-align: center;
     }
+
+}
+
+@media (min-width: 768px) and (max-width: 1160px) {
+    
+
+    .img-creditos img {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .container-creditos-modern {
+        gap: 1.5rem;
+        flex-direction: column;
+        width: 75%;
+    }
+
+
+    .creditos-table-wrapper {
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .creditos-tabela-modern {
+        width: 100vw;
+   
+    }
+    
 
 }
