@@ -3,9 +3,11 @@
 .banner-cobrancas {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ocupa a altura da tela inteira */
+    height: 100vh;
+    /* Ocupa a altura da tela inteira */
     background-image: url('/cobranca/img/cobranca-banner.jpeg');
-    background-attachment: fixed; /* Efeito parallax */
+    background-attachment: fixed;
+    /* Efeito parallax */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,18 +22,20 @@
 
 .container-cobrancas {
     position: relative;
-    z-index: 2; /* Conteúdo fica acima do fundo */
+    z-index: 2;
+    /* ConteÃºdo fica acima do fundo */
 }
 
 .content-cobrancas h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* Dá profundidade no texto */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    /* DÃ¡ profundidade no texto */
 }
 
 .content-cobrancas p {
     font-size: 1.5rem;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Um "escurecimento" de fundo para dar profundidade */
@@ -42,7 +46,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4); /* Camada escura sobre a imagem */
+    background: rgba(0, 0, 0, 0.4);
+    /* Camada escura sobre a imagem */
     z-index: 1;
 }
 
@@ -50,11 +55,14 @@
 @media (max-width: 768px) {
     .banner-cobrancas {
         height: 60vh;
-        background-attachment: scroll; /* Desativa parallax no mobile para evitar bugs */
+        background-attachment: scroll;
+        /* Desativa parallax no mobile para evitar bugs */
     }
+
     .content-cobrancas h1 {
         font-size: 2rem;
     }
+
     .content-cobrancas p {
         font-size: 1.2rem;
     }
@@ -66,7 +74,7 @@
     padding: 40px;
 }
 
-/* Títulos */
+/* TÃ­tulos */
 .container-title-faq {
     display: flex;
     flex-direction: column;
@@ -97,7 +105,7 @@
     margin: auto;
 }
 
-/* Cada botão de pergunta */
+/* Cada botÃ£o de pergunta */
 .faq-cobrancas {
     display: flex;
     justify-content: space-between;
@@ -115,12 +123,12 @@
     transition: background 0.3s, color 0.3s;
 }
 
-/* Hover no botão */
+/* Hover no botÃ£o */
 .faq-cobrancas:hover {
     background: #f0f0f0;
 }
 
-/* Ícone de toggle + ou - */
+/* Ãcone de toggle + ou - */
 .faq-toggle-plus,
 .faq-toggle {
     color: #B41819;
@@ -129,7 +137,7 @@
     margin-left: 10px;
 }
 
-/* Resposta oculta por padrão */
+/* Resposta oculta por padrÃ£o */
 .faq-answer-cobrancas {
     display: none;
     padding: 15px;
@@ -142,7 +150,7 @@
     animation: fadeIn 0.3s ease;
 }
 
-.btn-pague{
+/* .btn-pague{
     background-color: #B41819;
     color: white;
     padding: 10px 20px;
@@ -151,9 +159,64 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s, transform 0.3s; /* Transição suave */
+    text-decoration: none; */
+/* Remove underline */
+/*  transition: background-color 0.3s, transform 0.3s; */
+/* TransiÃ§Ã£o suave */
 
+/* } */
+
+
+/* Layout lado a lado dos formulários de botão */
+.button-row {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    /* melhora em telas pequenas */
+}
+
+/* Botão para pagamento com cartão */
+.btn-pague-cartao {
+    background-color: #007bff;
+    /* Azul padrão para cartão */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 150px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-pague-cartao:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Botão para pagamento com boleto */
+.btn-pague-boleto {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 150px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Botão Parcelow (boleto) */
+.btn-boleto {
+    background-color: rgb(13, 161, 112);
+    color: white;
+}
+
+.btn-boleto:hover {
+    background-color: #065c38;
+    transform: scale(1.05);
 }
 
 /* Quando ativo, mostrar resposta */
@@ -161,15 +224,100 @@
     display: block;
 }
 
-/* Animação suave na resposta */
+
+/* Valor em destaque (R$) */
+.valor-pagamento {
+    color: green;
+}
+
+.form-pagamento {
+    background-color: #f9f9f9;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 350px;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.form-pagamento h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #003d82;
+}
+
+.info-pagamento {
+    margin-bottom: 16px;
+    color: #555;
+}
+
+.input-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.input-group input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    /* Espaço entre os botões */
+    margin-top: 15px;
+}
+
+.btn-pagamento {
+    flex: 1;
+    /* Faz com que os botões se ajustem igualmente */
+    min-width: 200px;
+    /* Evita que fiquem muito pequenos em telas menores */
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-pagamento:hover {
+    transition: background-color 0.3s;
+}
+
+.btn-cartao {
+    background-color: #0057d9;
+}
+
+.btn-cartao:hover {
+    background-color: #114aa0;
+    transform: scale(1.05);
+}
+
+
+
+/* AnimaÃ§Ã£o suave na resposta */
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(-5px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-

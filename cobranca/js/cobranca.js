@@ -39,4 +39,35 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 
+  //box do nome e pagamento
+  /* function preencherInput(form) {
+    const nomeAlunoInput = document.getElementById('student_name');
+    const nomeAlunoInput2 = document.getElementById('student_name');
+    const nomeAlunoInput3 = document.getElementById('student_name');
+
+    const nomeAluno = nomeAlunoInput.value.trim().replace(/\s+/g, ' ');
+    const nomeAluno2 = nomeAlunoInput2.value.trim().replace(/\s+/g, ' ');
+    const nomeAluno3 = nomeAlunoInput3.value.trim().replace(/\s+/g, ' ');
+
+    // Regex corrigida: exige pelo menos duas palavras com 2+ letras, permitindo acentos
+    const nomeValido = /^([A-Za-zÀ-ÿ]{2,})(\s+[A-Za-zÀ-ÿ]{2,})+$/;
+
+    if (!nomeAluno || !nomeAluno2 || !nomeAluno3) {
+      alert("Por favor, preencha o nome do aluno.");
+      nomeAlunoInput.focus();
+      return false;
+    }
+
+    if (!nomeValido.test(nomeAluno) || !nomeValido.test(nomeAluno2) || !nomeValido.test(nomeAluno2)) {
+      alert("Digite o nome completo (nome e sobrenome).");
+      nomeAlunoInput.focus();
+      return false;
+    }
+
+    form.querySelector('input[name="student_name"]').value = nomeAluno;
+    return true;
+  } */
+
+
+
 });

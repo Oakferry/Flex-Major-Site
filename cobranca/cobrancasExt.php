@@ -1,3 +1,7 @@
+<?php
+$public_key = 'STRIPE_SECRET_KEY'
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,23 +17,128 @@
     <link rel="stylesheet" href="/navbar/css/navbar.css">
     <link rel="stylesheet" href="/cobranca/css/cobranca.css">
     <link rel="stylesheet" href="/cobranca/css/cobranca-responsive.css">
-
+    <!-- <script src="https://parcelow.com.br/embed/embed.min.js"></script> -->
 
     <style>
         .wpp-fixo {
             position: fixed;
             width: 60px;
             height: 60px;
-            bottom: 5px;
-            margin-bottom: 30px;
+            bottom: 30px;
             right: 20px;
             background-color: #25d366;
+            border-radius: 50%;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+
+        .wpp-fixo a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .wpp-fixo img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        /* Tooltip acima */
+        .wpp-fixo a::after {
+            content: "Fale conosco";
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
             color: #fff;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 1px 1px 2px #888;
-            z-index: 900;
+            padding: 6px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            opacity: 0;
+            white-space: nowrap;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        /* Setinha para baixo (abaixo do balão) */
+        .wpp-fixo a::before {
+            content: "";
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .wpp-fixo a:hover::after,
+        .wpp-fixo a:hover::before {
+            opacity: 1;
+        }
+
+        /* Animação pulsante */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 700px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            color: black;
         }
     </style>
 
@@ -137,185 +246,322 @@
     </section>
 
 
-    <!-- FAQ -->
+    <!-- FAQ pagamentos -->
     <section class="section-faq-cobrancas">
 
-        <!-- Perguntas Frequentes -->
         <div class="faq-list-cobrancas">
+            <!-- Pagamento 1 -->
             <div class="faq-item-cobrancas">
                 <button class="faq-cobrancas">
-                    Tipo 1: Flex Major School - High School Diploma
+                    Tuition Middle School
                     <span class="faq-toggle-plus">+</span>
                 </button>
                 <div class="faq-answer-cobrancas">
-                    <p class="p-answer">
-                        O programa Flex Major School - High School Diploma é um programa de ensino
+                    <!-- <p class="p-answer">
+                        O programa Flex Major School - <strong>Middle School Diploma</strong> é um programa de ensino
                         médio que oferece um diploma reconhecido nos Estados Unidos. O aluno pode
                         escolher entre o diploma regular ou o diploma com honras, dependendo do seu
                         desempenho acadêmico e das disciplinas cursadas.
-                    </p>
-                    <button id="payButton" href="pagseguro.com" class="btn-pague" target="_blank"
-                        rel="noopener noreferrer"> Pague aqui</button>
-                </div>
-            </div>
-            <div class="faq-item-cobrancas">
-                <button class="faq-cobrancas">
-                    Tipo 2: Flex Major School - High School Diploma + AP Courses
-                    <span class="faq-toggle-plus">+</span>
-                </button>
-                <div class="faq-answer-cobrancas">
-                    <p class="p-answer">
-                        O programa Flex Major School - High School Diploma + AP Courses é um programa
-                        de ensino médio que oferece um diploma reconhecido nos Estados Unidos e a
-                        oportunidade de cursar disciplinas avançadas (AP) para obter créditos universitários.
-                    </p>
-                    <button id="payButton" href="pagseguro.com" class="btn-pague" target="_blank"
-                        rel="noopener noreferrer"> Pague aqui</button>
+                    </p> -->
+                    <div class="form-container">
 
-                </div>
-            </div>
-            <div class="faq-item-cobrancas">
-                <button class="faq-cobrancas">
-                    Tipo 3: Flex Major School - High School Diploma + SAT/ACT Preparation
+                        <div class="button-row">
+                            <!-- Pague com Stripe -->
+                            <!-- Campos compartilhados -->
+                            <div class="form-pagamento">
+                                <h3 class="titulo-pagamento">Pagamento - Tuition Middle School </h3>
+                                <div class="info-pagamento">
+                                    <strong>Curso:</strong> <span>Tuition Middle School</span> <br>
+                                    <!-- <strong>Valor:</strong> <span class="valor-pagamento"> U$ 470,00</span> -->
+                                </div>
 
-                    <span class="faq-toggle-plus">+</span>
-                </button>
-                <div class="faq-answer-cobrancas">
-                    <p class="p-answer">
-                        O programa Flex Major School - High School Diploma + SAT/ACT Preparation é um
-                        programa de ensino médio que oferece um diploma reconhecido nos Estados Unidos e
-                        a preparação para os exames SAT ou ACT, que são exigidos por muitas universidades
-                        americanas.
-                    </p>
-                    <button id="payButton" href="pagseguro.com" class="btn-pague" target="_blank"
-                        rel="noopener noreferrer"> Pague aqui</button>
-                </div>
-            </div>
-            <div class="faq-item-cobrancas">
-                <button class="faq-cobrancas">
-                    Tipo 4: Flex Major School - Middle School Diploma
-                    <span class="faq-toggle-plus">+</span>
-                </button>
-                <div class="faq-answer-cobrancas">
-                    <p class="p-answer">
-                        O programa Flex Major School - Middle School Diploma é um programa de ensino
-                        fundamental que oferece um diploma reconhecido nos Estados Unidos. O aluno pode
-                        escolher entre o diploma regular ou o diploma com honras, dependendo do seu
-                        desempenho acadêmico e das disciplinas cursadas.
-                    </p>
-                    <button id="payButton" href="pagseguro.com" class="btn-pague" target="_blank"
-                        rel="noopener noreferrer"> Pague aqui</button>
-                </div>
-            </div>
-            <div class="faq-item-cobrancas">
-                <button class="faq-cobrancas">
-                    Tipo 5: Flex Major School - Middle School Diploma + AP Courses
+                                <!-- Campos de input fora dos formulários -->
+                                <!-- <div class="input-group">
+                                    <label for="student_name">Nome do Aluno</label>
+                                    <input type="text" id="student_name" name="student_name_input"
+                                        placeholder="Digite o nome completo" required>
+                                </div> -->
 
-                    <span class="faq-toggle-plus">+</span>
-                </button>
-                <div class="faq-answer-cobrancas">
-                    <p class="p-answer">
-                        O programa Flex Major School - Middle School Diploma + AP Courses é um programa
-                        de ensino fundamental que oferece um diploma reconhecido nos Estados Unidos e a
-                        oportunidade de cursar disciplinas avançadas (AP) para obter créditos universitários.
-                    </p>
-                    <button id="payButton" href="pagseguro.com" class="btn-pague" target="_blank"
-                        rel="noopener noreferrer"> Pague aqui</button>
-                </div>
-            </div>
-            <div class="faq-item-cobrancas">
-                <button class="faq-cobrancas">
-                    Tipo 6: Flex Major School - College Prep Program
-                    <span class="faq-toggle-plus">+</span>
-                </button>
-                <div class="faq-answer-cobrancas">
-                    <p class="p-answer">
-                        O programa Flex Major School - College Prep Program é um programa de preparação
-                        para a faculdade que oferece um diploma reconhecido nos Estados Unidos e a
-                        oportunidade de cursar disciplinas avançadas (AP) para obter créditos universitários.
-                    </p>
-                    <button id="payButton" href="pagseguro.com" class="btn-pague" target="_blank"
-                        rel="noopener noreferrer"> Pague aqui</button>
+
+                                <div class="button-row">
+                                    <!-- Botão Stripe -->
+                                    <button id="btnStripeMiddle" class="btn-pagamento btn-cartao">
+                                        Pagamento Internacional
+                                    </button>
+
+                                    <!-- Botão Parcelow -->
+                                    <button id="btnParcelowMiddle" class="btn-pagamento btn-boleto">
+                                        Pagamento (Brasil)
+                                    </button>
+                                </div>
+
+                                <script>
+                                    document.getElementById('btnStripeMiddle').addEventListener('click', function () {
+                                        // Link do Stripe Paylink real será adicionado depois
+                                        window.open('https://buy.stripe.com/eVa01Ad6efbi3v228x', '_blank', 'noopener,noreferrer');
+                                    });
+
+                                    document.getElementById('btnParcelowMiddle').addEventListener('click', function () {
+                                        window.open('https://app.parcelow.com.br/payment-link/pay/NqJX16YARM', '_blank', 'noopener,noreferrer');
+                                    });
+                                </script>
+
+                                <!--   <script src="https://js.stripe.com/v3/"></script>
+                                    <script>
+                                        async function iniciarCheckoutEmbed(){
+                                            const resposta = await fetch('/backend/checkout.php',{
+                                                method: 'POST',
+                                                headers: {'Content-Type': 'application/json'},
+                                                body: JSON.stringify({
+                                                    studant_name: document.getElementById('student_name').value
+                                                })
+                                            });
+                                            const dados = await resposta.json();
+
+                                            if(!dados.client_reference_id){
+                                                alert("Erro ao gerar sessão de checkout.");
+                                                return;
+                                            }
+
+                                            const stripe = Stripe('public_key');
+
+                                            await stripe.initEmbeddedCheckout({
+                                                clientRefenceId: dados.client_reference_id,
+                                                element: '#checkout_container',
+                                            });
+                                        }
+                                    </script> -->
+
+
+
+
+
+
+
+                                <!-- Botão Parcelow -->
+                                <!-- <form action="/cobranca/parcelow-form.php" method="POST"
+                                        onsubmit="return preencherInput(this)">
+                                        <input type="hidden" name="student_name" value="">
+                                        <input type="hidden" name="product_name" value="Middle School Diploma">
+                                        <input type="hidden" name="amount" value="12.000,00"> -->
+                                <!--  <input type="hidden" name="cpf" value="12345678909"> -->
+                                <!-- Substituir por input dinâmico -->
+                                <!--  <input type="hidden" name="payment_method" value="pix"> -->
+                                <!-- ou 'boleto' -->
+                                <!--  <input type="hidden" name="due_date" value="2025-05-10"> -->
+                                <!-- Substituir se necessário -->
+                                <!--  <button class="btn-pagamento btn-boleto" type="submit">Pagamento
+                                            parcelado</button> -->
+                                <!-- -->
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+
+            <!-- Pagamento 2 -->
+            <div class="faq-item-cobrancas">
+                <button class="faq-cobrancas">
+                    Tuition High School
+                    <span class="faq-toggle-plus">+</span>
+                </button>
+
+                <div class="faq-answer-cobrancas">
+                    <div class="form-container">
+                        <div class="button-row">
+                            <div class="form-pagamento">
+                                <h3 class="titulo-pagamento">Pagamento - Tuition High School</h3>
+                                <div class="info-pagamento">
+                                    <strong>Curso:</strong> Tuition High School<br>
+                                    <!-- <strong>Valor:</strong> <span class="valor-pagamento">U$ 690,00</span> -->
+                                </div>
+
+                                <!-- Campos de input -->
+                                <!-- <div class="input-group">
+                                    <label for="student_name">Nome do Aluno</label>
+                                    <input type="text" id="student_name" name="student_name_input"
+                                        placeholder="Digite o nome completo" required>
+                                </div> -->
+
+                                <!-- Botões de pagamento -->
+                                <div class="button-row">
+                                    <!-- Botão Stripe -->
+                                    <button id="btnStripeHigh" class="btn-pagamento btn-cartao">
+                                        Pagamento Internacional
+                                    </button>
+
+                                    <!-- Botão Parcelow -->
+                                    <button id="btnParcelowHigh" class="btn-pagamento btn-boleto">
+                                        Pagamento (Brasil)
+                                    </button>
+                                </div>
+
+
+
+                                <!-- Scripts -->
+                                <script>
+                                    document.getElementById('btnStripeHigh').addEventListener('click', function () {
+                                        // Link do Stripe Paylink real será adicionado depois
+                                        window.open('https://buy.stripe.com/cN2g0y5DMe7e5Da28w', '_blank', 'noopener,noreferrer');
+                                    });
+
+                                    document.getElementById('btnParcelowHigh').addEventListener('click', function () {
+                                        window.open('https://app.parcelow.com.br/payment-link/pay/O3JY8a659M', '_blank', 'noopener,noreferrer');
+                                    });
+                                </script>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagamento 3 -->
+            <!-- Pagamento Parcelow -->
+            <div class="faq-item-cobrancas">
+                <button class="faq-cobrancas">
+                    College Prep
+                    <span class="faq-toggle-plus">+</span>
+                </button>
+                <div class="faq-answer-cobrancas">
+                    <div class="form-container">
+                        <div class="form-pagamento">
+                            <h3 class="titulo-pagamento">Pagamento - College Prep.</h3>
+
+                            <div class="info-pagamento">
+                                <strong>Curso:</strong> College Prep.<br>
+                                <!--  <strong>Valor:</strong> <span class="valor-pagamento">U$ 4000,00</span> -->
+                            </div>
+
+                            <!--  <div class="input-group">
+                                <label for="student_name">Nome do Aluno</label>
+                                <input type="text" id="student_name" placeholder="Digite o nome completo" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="cpf">CPF</label>
+                                <input type="text" id="cpf" placeholder="000.000.000-00" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" placeholder="email@exemplo.com" required>
+                            </div> -->
+
+
+                            <!-- Botão -->
+                            <!-- Botão Parcelow -->
+                            <div class="button-row">
+                                <button id="btnPagamentoCollegePrep" class="btn-pagamento btn-boleto">
+                                    Pagamento (Brasil)
+                                </button>
+                            </div>
+
+                            <script>
+                                document.getElementById('btnPagamentoCollegePrep').addEventListener('click', function () {
+                                    window.open('https://app.parcelow.com.br/payment-link/pay/y0Av7bvLwX', '_blank', 'noopener,noreferrer');
+                                });
+                            </script>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const btn = document.getElementById('btnPagamento');
+                const modal = document.getElementById('parcelow-checkout');
+                const iframe = document.getElementById('parcelow-iframe');
+
+                btn.addEventListener('click', function () {
+                    // Aqui você pode definir uma URL fixa ou dinâmica
+                    iframe.src = "https://app.parcelow.com.br/payment-link/pay/y0Av7bvLwX"; // substitua pela URL correta
+                    modal.style.display = 'flex';
+                });
+            });
+
+            function fecharModal() {
+                const modal = document.getElementById('parcelow-checkout');
+                const iframe = document.getElementById('parcelow-iframe');
+                modal.style.display = 'none';
+                iframe.src = '';
+            } -->
+
+
+        <!-- /*  document.getElementById('btnPagamento').onclick = function () */ /* { */
+            /* const student_name = document.getElementById('student_name').value.trim();
+            const cpf = document.getElementById('cpf').value.trim();
+            const email = document.getElementById('email').value.trim(); */
+
+            /*                     if (!student_name || !cpf || !email) {
+                                    alert('Por favor, preencha todos os campos.');
+                                    return;
+                                }
+             */
+            /*     const payload = {
+                    student_name: student_name,
+                    product_name: 'College Prep',
+                    amount: 2300000, */ // R$ 23.000,00 em centavos
+            /*    cpf: cpf,
+               email: email,
+               payment_method: 'pix',
+               due_date: '2025-05-17'
+           };
+
+           fetch('/backend/parcelow.php', {
+               method: 'POST',
+               headers: { 'Content-Type': 'application/json' },
+               body: JSON.stringify(payload)
+           })
+               .then(res => res.json())
+               .then(data => {
+                   if (data.success) {
+                       document.getElementById('checkoutIframe').src = data.checkout_url;
+                       document.getElementById('modal-checkout').style.display = 'block';
+                   } else {
+                       alert('Erro ao criar checkout: ' + (data.error || 'Erro desconhecido'));
+                   }
+               })
+               .catch(err => {
+                   alert('Erro na requisição.');
+                   console.error(err);
+               });
+       }; */ -->
+        <!--  </script> -->
+
+
+        <!-- Verificando nome completo -->
+
+
+
+
+
     </section>
 
 
-
-
-    <!-- WhatsApp - icone fixo -->
+    <!-- WhatsApp - ícone fixo -->
     <div class="wpp-fixo">
-        <a
-            href="https://api.whatsapp.com/send?phone=14079893636&text=Hello,%20I%20%20found%20you%20through%20your%20Website"><img
-                src="/album/img/whatsapp (2).png" alt="Fale conosco - wpp"></a>
+        <a href="https://api.whatsapp.com/send?phone=14079893636&text=Hello,%20I%20found%20you%20through%20your%20Website"
+            target="_blank" rel="noopener noreferrer">
+            <img src="/album/img/whatsapp (2).png" alt="Fale conosco no WhatsApp" />
+        </a>
     </div>
 
-    <!-- Para PHP -->
-    <!-- <?php include 'footer.html'; ?> -->
+    <!-- Placeholder para o footer -->
+    <div id="footer-placeholder"></div>
 
-    <!-- <footer id="footer-placeholder"></footer> --> <!-- Aqui o footer será carregado -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <p class="paragrafo1">Location</p>
-                <ul class="localizacao">
-                    <li>1878 Thetford Rd</li>
-                    <li>Orlando/Fl</li>
-                    <li>32824</li>
-                </ul>
-            </div>
-            <div class="footer-centro">
-                <div class="footer-logo">
-                    <a href="/index.html">
-                        <img src="/footer/img/logo-branca-footer.png" alt="">
-                    </a>
-                </div>
-                <div class="footer-redes-sociais">
-                    <a target="_blank" href="https://www.instagram.com/flexmajorschool/">
-                        <img src="/index/img/instagram.svg" alt="instagram">
-                    </a>
-                    <a target="_blank" href="https://www.facebook.com/Flex-Major-School-102353782292788">
-                        <img src="/index/img/facebook.svg" alt="facebook">
-                    </a>
-                    <a target="_blank" style="width: 27px; height: 27px;"
-                        href="hhttps://www.linkedin.com/company/flex-major-school/">
-                        <img src="/index/img/linkedin32.png" alt="linkedin">
-                    </a>
-                </div>
-            </div>
-            <div class="footer-rigth">
-                <p class="footer-email">email@gmail.com</p>
-                <ul class="lista-school">
-                    <li class="lista-topico">
-                        <a class="list-rigth" href="/middle-school/middle-ing.html">
-                            <img src="/footer/img/pessoa-branca.png" alt="">
-                            Middle School
-                        </a>
-                    </li>
-                    <li class="lista-topico">
-                        <a class="list-rigth" href="/high-school/high-ing.html">
-                            <img src="/footer/img/pessoa-branca.png" alt="">
-                            High School
-                        </a>
-                    </li>
-                    <li class="lista-topico">
-                        <a class="list-rigth" href="/college-prep/college-ing.html">
-                            <img src="/footer/img/pessoa-branca.png" alt="">
-                            College Prep.
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="sub-footer">
-            <div>Flex Major School™ 2025 – All Rights Reserved</div>
-            <div>Developed by <a target="_blank" href="https://www.linkedin.com/in/caio-farinha-904aab25b/">Caio
-                    Farinha™</a> & <a href="">Victor Hugo™</a></div>
-        </div>
-    </footer>
+    <!-- Script do footer -->
+    <script src="/footer/js/footer.js"></script>
+
+    <script src="/navbar/js/script.js"></script>
 
     <script src="/navbar/js/script.js"></script>
     <script src="/cobranca/js/cobranca.js"></script>
