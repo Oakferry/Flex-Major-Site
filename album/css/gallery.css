@@ -28,37 +28,11 @@
     box-shadow: 0 0 15px rgba(255,255,255,0.2); /* Adiciona um leve destaque na imagem do modal */
   }
 
-.banner-album {
-    position: relative;
-    width: 100%;
-    height: 310px; /* Ajuste conforme necessário */
-    overflow: hidden;
-    margin-top: 100px; /* Ajuste conforme necessário */
-}
 
-
-.banner-album img{
-    width: 100%; /* Para ocupar toda a largura do container */
-    display: block; /* Remove espaços indesejados abaixo da imagem */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    object-fit: cover;
-}
-
-.banner-album h1{
-    position: absolute;
-    z-index: 2;
-    top: 50%; /* Posiciona no meio da imagem */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza perfeitamente */
-    color: white; /* Para contrastar com a imagem */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Melhora a legibilidade */
-    font-size: 30px;
-    text-decoration: solid;
-
-}
+    /* BANNER ALBUM - Com css do middle.css*/
+    .banner-middle {
+        background-image: url('/album/img/banner-album.jpg') !important;
+    }
 
 
 
@@ -221,16 +195,6 @@
 
 @media (min-width:600px) and (max-width: 768px) {
 
-
-    /* BANNER ALBUM */
-    .banner-album > img{
-        height: 250px;
-        object-fit: cover;
-    }
-
-    .banner-album > h1{
-        top: 35%;
-    }
 
     .section-body{
         padding: 40px;

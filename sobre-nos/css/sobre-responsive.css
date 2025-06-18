@@ -4,51 +4,53 @@
 @media (max-width: 768px) {
   .banner-middle {
     background-attachment: local;
-}
+  }
 
-  
+.content-middle h1 {
+    font-size: 3rem;
+
+} 
+
   .primeira-secção {
     padding: 10px 20px;
-}
-
-    .quadrado {
-      max-width: 100%; 
-    }
-  
-    .containerafiliados {
-      flex-direction: column;
-      align-items: center;
-      padding: 0px;
-      gap: 10px;
-    }
-  
-    .parceiros{
-      padding: 0px 0 2px 0 !important;
-
-    }
-
-    .formatacaoimg {
-      width: 90%;
-      margin: 0 auto;
-      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
-      margin-top: 50px;
-      border-radius: 30% 20px;
   }
 
-    /* Equipe */
-  
-    .containerequipe {
-      padding: 20px;
-    }
-  
-    .container-equipe {
-      flex-direction: column;
-      align-items: center;
-      gap: 22px;
+  .quadrado {
+    max-width: 100%;
   }
+
+  .containerafiliados {
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+  }
+
+  .parceiros {
+    padding: 0px 0 2px 0 !important;
+
+  }
+
+  .formatacaoimg {
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    border-radius: 30% 20px;
+  }
+
+  /* Equipe */
+
+  .containerequipe {
+    padding: 20px;
+  }
+
+  .container-equipe {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
   /* Estilos para tablets e telas médias */
-  @media (min-width: 769px) and (max-width: 1024px) {
-  
- 
-  }
+  @media (min-width: 769px) and (max-width: 1024px) {}
 }

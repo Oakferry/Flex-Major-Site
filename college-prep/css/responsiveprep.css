@@ -58,9 +58,26 @@
         text-align: justify;
     }
 
+    .content-college h1 {
+        font-size: 3rem;
+    }
+
+    /* Sobre o embreve */
+    .descricao-embreve {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .btn-wpp-embreve {
+        padding: 0.9rem 1.1rem;
+        font-size: .9rem;
+    }
+
+    /*  */
     .tituloed {
         padding: 0px 10px;
     }
+
     .subed {
         padding: 0 10px;
     }
