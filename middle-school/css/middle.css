@@ -139,6 +139,8 @@ main {
     display: block;
     border-radius: 10px;
     object-fit: cover;
+    max-width: 100%;
+    max-height: 550px;
 }
 
 /* Importa uma fonte moderna e sem serifa para o layout */
