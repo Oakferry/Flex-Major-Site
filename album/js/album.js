@@ -8,6 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentIndex = 0;
 
+    // Exibe conteúdo só após tudo estar carregado
+    window.onload = function () {
+        document.body.style.visibility = "visible";
+    };
+  
+
     function openModal(index) {
         modal.style.display = "flex";
         setTimeout(() => {

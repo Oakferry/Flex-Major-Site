@@ -1,3 +1,7 @@
+body {
+    visibility: hidden;
+}
+
 /* Animação de fade */
 @keyframes fadeIn {
     from {
@@ -81,6 +85,7 @@
 
 .grid-wrapper .tall{
     grid-row: span 2;
+
 }
 .grid-wrapper .big{
     grid-column: span 2;
@@ -93,7 +98,8 @@
     cursor: pointer; /* Muda o cursor para indicar que a imagem é clicável */
 }
 .grid-wrapper img {
-    max-width: 1200px;
+    max-width: 750px;
+    max-height:750px;
 }
 
 .grid-wrapper img:hover {

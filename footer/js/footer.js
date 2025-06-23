@@ -1,11 +1,11 @@
 $(document).ready(function () {
     var lang = $('html').attr('lang') || 'pt-br';
-    var footerUrl = 'footer/footer-pt.html'; // caminho base
+    var footerUrl = '/footer/footer-pt.html'; // caminho absoluto
   
     if (lang === 'en') {
-      footerUrl = 'footer/footer-en.html';
+      footerUrl = '/footer/footer-en.html';
     } else if (lang === 'es') {
-      footerUrl = 'footer/footer-es.html';
+      footerUrl = '/footer/footer-es.html';
     }
   
     $('#footer-placeholder').load(footerUrl, function(response, status, xhr) {
